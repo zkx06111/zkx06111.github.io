@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="GraphTheory," />
+  <meta name="keywords" content=",,,,,,,,,,," />
 
 
 
@@ -81,9 +81,9 @@
 
 <meta name="description" content="题意 题解把每棵树缩成一个点。从T向S连边，那题目就转化为寻找一条欧拉回路。 但由于原图上一个点只能访问一次，从一条有向边进入一棵树，并不是总能从另一条有向边出去。  例如这个图，中间两个点无论如何都会被重复经过。 对每一棵树进行dp来寻找一个入边和出边的对应关系，使得不会有点被重复经过。 这个dp怎么做呢？ 对于一个树点，首先直接连到它上面的出入边肯定各不超过1条，不然一定无解。 如果出入边均0">
 <meta name="keywords" content="GraphTheory">
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:title" content="GCPC F Last Minute Constructions">
-<meta property="og:url" content="http://yoursite.com/2018/08/10/del_posts/last-minute-constructions/index.html">
+<meta property="og:url" content="http://yoursite.com/del_posts/last-minute-constructions.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
 <meta property="og:description" content="题意 题解把每棵树缩成一个点。从T向S连边，那题目就转化为寻找一条欧拉回路。 但由于原图上一个点只能访问一次，从一条有向边进入一棵树，并不是总能从另一条有向边出去。  例如这个图，中间两个点无论如何都会被重复经过。 对每一棵树进行dp来寻找一个入边和出边的对应关系，使得不会有点被重复经过。 这个dp怎么做呢？ 对于一个树点，首先直接连到它上面的出入边肯定各不超过1条，不然一定无解。 如果出入边均0">
 <meta property="og:locale" content="default">
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/10/del_posts/last-minute-constructions/"/>
+  <link rel="canonical" href="http://yoursite.com/del_posts/last-minute-constructions.html"/>
 
 
 
@@ -244,86 +244,24 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/10/del_posts/last-minute-constructions/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zkx06111">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zkx06111's Blog">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">GCPC F Last Minute Constructions</h1>
-        
+	<h1 class="post-title" itemprop="name headline">GCPC F Last Minute Constructions</h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-10T19:34:56+08:00">
-                2018-08-10
-              </time>
-            
 
-            
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
       
-
       
-        <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p><img src="/var/folders/g6/ydpn55kd6hb0b8kd8hp1ngmh0000gn/T/abnerworks.Typora/image-20180810193607554.png" alt="image-20180810193607554"></p>
+      <div class="post-body">
+        
+        
+          <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p><img src="/var/folders/g6/ydpn55kd6hb0b8kd8hp1ngmh0000gn/T/abnerworks.Typora/image-20180810193607554.png" alt="image-20180810193607554"></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>把每棵树缩成一个点。从T向S连边，那题目就转化为寻找一条欧拉回路。</p>
 <p>但由于原图上一个点只能访问一次，从一条有向边进入一棵树，并不是总能从另一条有向边出去。</p>
 <p><img src="/var/folders/g6/ydpn55kd6hb0b8kd8hp1ngmh0000gn/T/abnerworks.Typora/image-20180810193941856.png" alt="image-20180810193941856"></p>
@@ -337,67 +275,15 @@
 <p>如果某一棵树不存在对应关系，则 impossible 。</p>
 <p>否则有解。</p>
 
+        
+      </div>
+      
+      
       
     </div>
     
     
     
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/GraphTheory/" rel="tag"># GraphTheory</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/07/10/2017-07-10-a-hard-lesson/" rel="next" title="沉痛的教训">
-                <i class="fa fa-chevron-left"></i> 沉痛的教训
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/11/everyday-life/" rel="prev" title="不定期更新的日常">
-                不定期更新的日常 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -455,7 +341,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
