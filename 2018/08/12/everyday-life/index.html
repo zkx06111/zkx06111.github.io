@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="CodeForces," />
+  <meta name="keywords" content="Life," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="昨天晚上打了CF #349的Div 2，只出了ABC。现在来补题辣！还差几道： 3">
-<meta name="keywords" content="CodeForces">
+<meta name="description" content="这是个栈。尽量不让它掉出博客第一页吧。 目前更新到了2018-08-12。">
+<meta name="keywords" content="Life">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CodeForces Round #349">
-<meta property="og:url" content="http://yoursite.com/2016/04/30/2016-04-30-cf-349/index.html">
+<meta property="og:title" content="不定期更新的日常">
+<meta property="og:url" content="http://yoursite.com/2018/08/12/everyday-life/index.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
-<meta property="og:description" content="昨天晚上打了CF #349的Div 2，只出了ABC。现在来补题辣！还差几道： 3">
+<meta property="og:description" content="这是个栈。尽量不让它掉出博客第一页吧。 目前更新到了2018-08-12。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-30T12:55:01.383Z">
+<meta property="og:updated_time" content="2018-08-13T14:36:34.981Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeForces Round #349">
-<meta name="twitter:description" content="昨天晚上打了CF #349的Div 2，只出了ABC。现在来补题辣！还差几道： 3">
+<meta name="twitter:title" content="不定期更新的日常">
+<meta name="twitter:description" content="这是个栈。尽量不让它掉出博客第一页吧。 目前更新到了2018-08-12。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/04/30/2016-04-30-cf-349/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/12/everyday-life/"/>
 
 
 
 
 
-  <title>CodeForces Round #349 | zkx06111's Blog</title>
+  <title>不定期更新的日常 | zkx06111's Blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/30/2016-04-30-cf-349/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/12/everyday-life/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zkx06111">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CodeForces Round #349</h1>
+          <h1 class="post-title" itemprop="name headline">不定期更新的日常</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-04-30T13:51:00+08:00">
-                2016-04-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-12T21:20:00+08:00">
+                2018-08-12
               </time>
             
 
@@ -320,24 +320,16 @@
       
 
       
-        <p>昨天晚上打了CF #349的Div 2，只出了ABC。现在来补题辣！<br>还差几道： <strong>3</strong><br><a id="more"></a></p>
-<h3 id="A-Pouring-Rain"><a href="#A-Pouring-Rain" class="headerlink" title="A. Pouring Rain"></a>A. Pouring Rain</h3><p>一个圆柱题杯子，底面直径为d，初始水深为h，你每秒可以喝v毫升的水，每秒会下e毫升的雨，问你能不能喝完水，并求出喝完水的时间。</p>
-<p>按照题意模拟即可。时间复杂度O(1)<br>这里是<a href="http://codeforces.com/contest/667/submission/17571988" target="_blank" rel="noopener">我的代码</a>。</p>
-<h3 id="B-Coat-of-Anticubism"><a href="#B-Coat-of-Anticubism" class="headerlink" title="B. Coat of Anticubism"></a>B. Coat of Anticubism</h3><p>告诉你n条边，求出最小的一个长度，使得加入该长度的边之后可以形成一个凸多边形，注意边可以夹角为180度。</p>
-<p>好吧，我在写的时候是发现了样例全部都是形成三角形，于是就猜三角形一定最好。</p>
-<p>于是就只要按照边的长度排序，如果存在一个分割点使得它以及它之前的和大于等于它后面的和，那么就只要加入一条长度为1的边。如果不存在，就加入一条长度为min{presum[i], sufsum[i+1]}的边。时间复杂度O(nlgn)</p>
-<p><del>为什么这样可以呢？我们来讲讲道理。</del> 啊…我不知道啊…求老司机告知，我现在感觉自己的做法非常没有道理啊…好像随便卡就能卡掉啊…</p>
-<p>这里是<a href="http://codeforces.com/contest/667/submission/17571988" target="_blank" rel="noopener">我的代码</a>。</p>
-<h3 id="C-Reberland-Linguistics"><a href="#C-Reberland-Linguistics" class="headerlink" title="C. Reberland Linguistics"></a>C. Reberland Linguistics</h3><p>一个单词以这种方式构成：一个长度大于4的字符串，称为词根。然后在后面加一堆长度为2或3的后缀（<em>注意这里的后缀类似于英语构词法里面的后缀，并不是指包含字符串最后一个字符的字串</em>），同时还需要满足同样一个后缀（例如ab)不能被连续加入。</p>
-<p>题目题意好琐碎。我在考场上的记录非常悲剧：T9,W6,T20,W4,W4,A，简直酸爽无比。</p>
-<p>记忆化搜索，solve(x, l)表示目前处理子串S[0..x-1]，上一个加入的后缀长度为l，然后只需要根据题目说的不能连续加的要求把符合要求的字符串放进一个set里面就可以了。用一个数组solved记录某个状态有没有被访问过。</p>
-<p>时间复杂度O(nlgn)，其中lgn的复杂度来自set。</p>
-<p>这里是<a href="http://codeforces.com/contest/667/submission/17581148" target="_blank" rel="noopener">我的代码</a>。</p>
-<h3 id="D-World-Tour"><a href="#D-World-Tour" class="headerlink" title="D. World Tour"></a>D. World Tour</h3><p>告诉你一个有向图，要在其中选出4个不同的点(a, b, c, d)，使得相邻两个元素之间的最短路之和最大。</p>
-<p>结束之后补的。对于每个点，用广搜跑出单源最短路。然后，对于每个点，把其他点分别按照到它的最短路和从它走出的最短路排序。</p>
-<p>枚举(b, c)，然后分别枚举走到a，从d出发走到的最远的3个点，作为a和d，用来更新答案。</p>
-<p>注意判断：点不能相同，并且点与点之间必须要有路。复杂度O(n^2 lgn)，其中lg n的复杂度如果用计数排序代替快排就可以没有了。</p>
-<p>这里是<a href="http://codeforces.com/contest/667/submission/17589953" target="_blank" rel="noopener">我的代码</a>。</p>
+        <p>这是个栈。尽量不让它掉出博客第一页吧。</p>
+<p>目前更新到了2018-08-12。</p>
+<a id="more"></a>
+<h3 id="2018-08-12"><a href="#2018-08-12" class="headerlink" title="2018-08-12"></a>2018-08-12</h3><p>竺考初审没过，竟然有一丝轻松，可以好好打acm了哈哈。</p>
+<h3 id="2018-08-11"><a href="#2018-08-11" class="headerlink" title="2018-08-11"></a>2018-08-11</h3><p>又滚粗了，怀疑人生。</p>
+<p>竺院考试根本没空准备。</p>
+<p>累得不想说话。</p>
+<h3 id="2018-08-09"><a href="#2018-08-09" class="headerlink" title="2018-08-09"></a>2018-08-09</h3><p>浙大八月集训d1滚粗了QAQ。竺考准备好忙啊。</p>
+<h3 id="2018-08-07"><a href="#2018-08-07" class="headerlink" title="2018-08-07"></a>2018-08-07</h3><p>提前到达紫金港，第一次见到zqq，感觉他各种认真努力+身体素质好，值得学习。</p>
+<h3 id="2018-08-06"><a href="#2018-08-06" class="headerlink" title="2018-08-06"></a>2018-08-06</h3><p>昨天把vps搞好了，可以科学上网了。今天加入了口哨爱好者交流群，发现好多少战爱好者，双重的幸福。感觉自己最近不务正业啊。</p>
 
       
     </div>
@@ -355,7 +347,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CodeForces/" rel="tag"># CodeForces</a>
+            <a href="/tags/Life/" rel="tag"># Life</a>
           
         </div>
       
@@ -368,8 +360,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/12/2016-04-12-speech-contest/" rel="next" title="迟到的演讲比赛游记">
-                <i class="fa fa-chevron-left"></i> 迟到的演讲比赛游记
+              <a href="/2017/07/10/a-hard-lesson/" rel="next" title="沉痛的教训">
+                <i class="fa fa-chevron-left"></i> 沉痛的教训
               </a>
             
           </div>
@@ -378,8 +370,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/01/2016-07-01-game-theory-ad-hoc-problems/" rel="prev" title="博弈论杂题">
-                博弈论杂题 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/13/kd-odd-circle-gauss/" rel="prev" title="kd-odd-circle-gauss">
+                kd-odd-circle-gauss <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -503,7 +495,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Pouring-Rain"><span class="nav-number">1.</span> <span class="nav-text">A. Pouring Rain</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-Coat-of-Anticubism"><span class="nav-number">2.</span> <span class="nav-text">B. Coat of Anticubism</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-Reberland-Linguistics"><span class="nav-number">3.</span> <span class="nav-text">C. Reberland Linguistics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-World-Tour"><span class="nav-number">4.</span> <span class="nav-text">D. World Tour</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-12"><span class="nav-number">1.</span> <span class="nav-text">2018-08-12</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-11"><span class="nav-number">2.</span> <span class="nav-text">2018-08-11</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-09"><span class="nav-number">3.</span> <span class="nav-text">2018-08-09</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-07"><span class="nav-number">4.</span> <span class="nav-text">2018-08-07</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-06"><span class="nav-number">5.</span> <span class="nav-text">2018-08-06</span></a></li></ol></div>
             
 
           </div>

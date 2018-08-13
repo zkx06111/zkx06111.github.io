@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="GraphTheory," />
+  <meta name="keywords" content="NumberTheory,Combinatorics," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题意一开始n个点每个节点上都有小球。给出一些表示小球方向的有向图，一个图中每个节点有且仅有一条出边，表示使用这个有向图之后某个节点上的小球移动到另一个节点上。求经过无限次移动（顺序可以自行决定）之后，有小球的节点数最少是多少。">
-<meta name="keywords" content="GraphTheory">
+<meta name="description" content="题意有一个均匀硬币，两面都是空的，你需要抛$ K $次。如果向上的那面没有数字，你可以写上一个数字。给分数加上向上的那面写的数字。求使用最优策略的前提下，分数等于$ S $的概率，请给这个概率乘以$ 2 ^ K $。">
+<meta name="keywords" content="NumberTheory,Combinatorics">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SRM 705 450pts MovingTokens">
-<meta property="og:url" content="http://yoursite.com/2017/01/25/2017-01-25-srm-705-450pts-movingtokens/index.html">
+<meta property="og:title" content="SRM 695-1 800pts BearEmptyCoin">
+<meta property="og:url" content="http://yoursite.com/2016/08/08/srm-695-1-800pts-bearemptycoin/index.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
-<meta property="og:description" content="题意一开始n个点每个节点上都有小球。给出一些表示小球方向的有向图，一个图中每个节点有且仅有一条出边，表示使用这个有向图之后某个节点上的小球移动到另一个节点上。求经过无限次移动（顺序可以自行决定）之后，有小球的节点数最少是多少。">
+<meta property="og:description" content="题意有一个均匀硬币，两面都是空的，你需要抛$ K $次。如果向上的那面没有数字，你可以写上一个数字。给分数加上向上的那面写的数字。求使用最优策略的前提下，分数等于$ S $的概率，请给这个概率乘以$ 2 ^ K $。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-30T13:25:14.612Z">
+<meta property="og:updated_time" content="2018-07-30T13:34:44.066Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SRM 705 450pts MovingTokens">
-<meta name="twitter:description" content="题意一开始n个点每个节点上都有小球。给出一些表示小球方向的有向图，一个图中每个节点有且仅有一条出边，表示使用这个有向图之后某个节点上的小球移动到另一个节点上。求经过无限次移动（顺序可以自行决定）之后，有小球的节点数最少是多少。">
+<meta name="twitter:title" content="SRM 695-1 800pts BearEmptyCoin">
+<meta name="twitter:description" content="题意有一个均匀硬币，两面都是空的，你需要抛$ K $次。如果向上的那面没有数字，你可以写上一个数字。给分数加上向上的那面写的数字。求使用最优策略的前提下，分数等于$ S $的概率，请给这个概率乘以$ 2 ^ K $。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/25/2017-01-25-srm-705-450pts-movingtokens/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/08/srm-695-1-800pts-bearemptycoin/"/>
 
 
 
 
 
-  <title>SRM 705 450pts MovingTokens | zkx06111's Blog</title>
+  <title>SRM 695-1 800pts BearEmptyCoin | zkx06111's Blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/25/2017-01-25-srm-705-450pts-movingtokens/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/08/srm-695-1-800pts-bearemptycoin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zkx06111">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SRM 705 450pts MovingTokens</h1>
+          <h1 class="post-title" itemprop="name headline">SRM 695-1 800pts BearEmptyCoin</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-25T16:53:00+08:00">
-                2017-01-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-08T09:24:00+08:00">
+                2016-08-08
               </time>
             
 
@@ -320,12 +320,20 @@
       
 
       
-        <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>一开始n个点每个节点上都有小球。给出一些表示小球方向的有向图，一个图中每个节点有且仅有一条出边，表示使用这个有向图之后某个节点上的小球移动到另一个节点上。求经过无限次移动（顺序可以自行决定）之后，有小球的节点数最少是多少。</p>
+        <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>有一个均匀硬币，两面都是空的，你需要抛$ K $次。如果向上的那面没有数字，你可以写上一个数字。给分数加上向上的那面写的数字。求使用最优策略的前提下，分数等于$ S $的概率，请给这个概率乘以$ 2 ^ K $。</p>
 <a id="more"></a>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>可以处理出所有能通过一些操作走到一起的点对(i, j)，并保存方案。如果当前没有两个非空盒子满足可以走到一起，那么就停止操作，输出非空盒子的个数；否则就执行让它们走到一起的方案。</p>
-<p>证明：设在开始合并点对(i, j)之前执行过的操作序列为S，那么只需要在合并完(i, j)之后再次执行S，执行完之后非空盒子的集合一定是合并(i, j)前非空盒子集合的子集，这说明把合并(i, j)对最终答案没有影响。</p>
-<p>杜教的代码使用了从终点出发倒着dfs优雅地算出了可以合并的点对以及方案，于是感觉自己写的代码就是一坨翔。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> in[<span class="number">55</span>], equ[<span class="number">55</span>][<span class="number">55</span>], g[<span class="number">55</span>][<span class="number">55</span>], nxt[<span class="number">55</span>][<span class="number">55</span>], tmp[<span class="number">55</span>];</span><br><span class="line"><span class="built_in">vector</span>&lt;VI&gt; fr[<span class="number">55</span>][<span class="number">55</span>];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MovingTokens</span> &#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">		equ[x][y] = <span class="number">1</span>;</span><br><span class="line">		RVC(i, fr[x][y])&#123;</span><br><span class="line">			VI p = fr[x][y][i];</span><br><span class="line">			<span class="keyword">int</span> u = p[<span class="number">0</span>], v = p[<span class="number">1</span>];</span><br><span class="line">			<span class="keyword">if</span> (!equ[u][v])&#123;</span><br><span class="line">				nxt[u][v] = p[<span class="number">2</span>];</span><br><span class="line">				dfs(u, v);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m, <span class="built_in">vector</span> &lt;<span class="keyword">int</span>&gt; moves)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">memset</span>(equ, <span class="number">0</span>, <span class="keyword">sizeof</span> equ);</span><br><span class="line">		REP(i, <span class="number">0</span>, n - <span class="number">1</span>) REP(j, <span class="number">0</span>, n - <span class="number">1</span>) fr[i][j].clear();</span><br><span class="line">		REP(i, <span class="number">0</span>, n - <span class="number">1</span>) in[i] = <span class="number">1</span>;</span><br><span class="line">		REP(i, <span class="number">0</span>, n - <span class="number">1</span>) REP(j, <span class="number">0</span>, m - <span class="number">1</span>)</span><br><span class="line">			g[j][i] = moves[j * n + i];</span><br><span class="line">		REP(i, <span class="number">0</span>, m - <span class="number">1</span>) REP(j, <span class="number">0</span>, n - <span class="number">1</span>) REP(k, <span class="number">0</span>, n - <span class="number">1</span>)&#123;</span><br><span class="line">			VI v; v.pb(j); v.pb(k); v.pb(i);</span><br><span class="line">			fr[g[i][j]][g[i][k]].pb(v);</span><br><span class="line">		&#125;</span><br><span class="line">		REP(i, <span class="number">0</span>, n - <span class="number">1</span>) <span class="keyword">if</span> (!equ[i][i]) dfs(i, i);</span><br><span class="line">		<span class="keyword">while</span> (<span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">int</span> fl = <span class="number">0</span>;</span><br><span class="line">			REP(i, <span class="number">0</span>, n - <span class="number">1</span>) REP(j, i + <span class="number">1</span>, n - <span class="number">1</span>) <span class="keyword">if</span> (equ[i][j] &amp;&amp; in[i] &amp;&amp; in[j])&#123;</span><br><span class="line">				fl = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">int</span> x = i, y = j;</span><br><span class="line">				<span class="keyword">while</span> (x != y)&#123;</span><br><span class="line">					<span class="keyword">int</span> w = nxt[x][y];</span><br><span class="line">					x = g[w][x]; y = g[w][y];</span><br><span class="line">					debug(<span class="string">"%d %d\n"</span>, x, y);</span><br><span class="line">					REP(p, <span class="number">0</span>, n - <span class="number">1</span>) tmp[p] = in[p], in[p] = <span class="number">0</span>;</span><br><span class="line">					REP(p, <span class="number">0</span>, n - <span class="number">1</span>) in[g[w][p]] |= tmp[p];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (!fl) <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">		REP(i, <span class="number">0</span>, n - <span class="number">1</span>) ans += in[i];</span><br><span class="line">		<span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>如果$ K \mid S $，那么只要写$ \frac{S}{K} $即可，答案是$ 2 ^ K $。</p>
+<p>对于两种数字分别出现了$ x $和$ K - x$次的情况，只要满足$ gcd(x, K - x) \mid S $，就存在一种写数字的方案了。</p>
+<p>对于$ n $种合法的情况$(x_ 1, K - x_ 1), \ldots , (x_ n, K - x_ n)$，可以证明一定存在一个填在硬币上的数字$ a $，使得对于每种情况存在一个$ b $满足</p>
+<p>$$<br>        \begin{aligned}<br>        ax_ 1 + b_ 1(K - x_1) = S\\<br>        ax_ 2 + b_ 2(K - x_2) = S\\<br>        \vdots\\<br>        ax_ n + b_ n(K - x_n) = S<br>        \end{aligned}<br>$$</p>
+<p>证明如下：</p>
+<p>$ (a - b_ i) x_ i + b_ i K = S $，令$ c_ i = a - b_ i$，那么$ c_ i(K - x_ i) = aK - S $。</p>
+<p>令$ gcd(x_ i, K - x_ i) = d_ i, x_ i = d_ ie_ i, K - x_ i = d_ if_ i$，有$ gcd(e, f) = 1 $。因为$ d \mid S $，令$ s = d_ ig_ i $，代入上面的式子得到$ c_ id_ if_ i = ad_ i(e_ i + f_ i) - d_ ig_ i $。</p>
+<p>化简一下就是$ -b_ i f_ i = ae_ i - g_ i, gcd(e_ i, f_ i) = 1$，其中$b _i$任取，那么就是$ a \equiv e _i ^ {-1} g _i \pmod {f _i}$，这个东西是中国剩余定理的形式，所以有解。</p>
+<p>由此，可以得到一种最优策略，首先求出所有合法的$ x $，然后求出一个$ a $作为第一次写在硬币上的数字，（这个求的过程并不需要实现，因为题目不要求给出方案）。</p>
+<p>于是，枚举第一次写的数字连续出现的次数$ p $，剩下的$ K - p $次里面两种数字是均匀分布的，最优的方案是找到一个合法的第二种数字出现次数$ y $（即满足$ gcd(y, K - y) \mid S $），使得$ K - p \choose y $最大。把这个最大的组合数加给答案。</p>
+<p>最后答案要乘以2，因为写的数字可以先后交换顺序。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> comb[<span class="number">70</span>][<span class="number">70</span>];</span><br><span class="line"><span class="keyword">int</span> ok[<span class="number">70</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> b == <span class="number">0</span> ? a : gcd(b, a % b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BearEmptyCoin</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">winProbability</span><span class="params">(<span class="keyword">int</span> K, <span class="keyword">int</span> S)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (S % K == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">1l</span>l &lt;&lt; K;</span><br><span class="line">		comb[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		REP(i, <span class="number">1</span>, K) REP(j, <span class="number">1</span>, i)&#123;</span><br><span class="line">			comb[i][j] = comb[i - <span class="number">1</span>][j - <span class="number">1</span>] + comb[i - <span class="number">1</span>][j];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">memset</span>(ok, <span class="number">0</span>, <span class="keyword">sizeof</span> ok);</span><br><span class="line">		REP(i, <span class="number">1</span>, K) ok[i] = (S % gcd(i, K - i) == <span class="number">0</span>);</span><br><span class="line">		LL ans = <span class="number">0</span>;</span><br><span class="line">		REP(i, <span class="number">1</span>, K - <span class="number">1</span>)&#123;</span><br><span class="line">			LL mx = <span class="number">0</span>;</span><br><span class="line">			REP(j, <span class="number">1</span>, i) <span class="keyword">if</span> (ok[j]) mx = max(mx, comb[i][j]);</span><br><span class="line">			ans += mx;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ans * <span class="number">2</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -343,7 +351,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/GraphTheory/" rel="tag"># GraphTheory</a>
+            <a href="/tags/NumberTheory/" rel="tag"># NumberTheory</a>
+          
+            <a href="/tags/Combinatorics/" rel="tag"># Combinatorics</a>
           
         </div>
       
@@ -356,8 +366,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/21/2017-01-21-chinese-postman-problem/" rel="next" title="Chinese Postman Problem">
-                <i class="fa fa-chevron-left"></i> Chinese Postman Problem
+              <a href="/2016/07/01/game-theory-ad-hoc-problems/" rel="next" title="博弈论杂题">
+                <i class="fa fa-chevron-left"></i> 博弈论杂题
               </a>
             
           </div>
@@ -366,8 +376,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/16/2017-02-16-solving-dynamic-connectivity-problems-with-lct/" rel="prev" title="用LCT解决一类动态图问题">
-                用LCT解决一类动态图问题 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/09/01/spoj-kqueryo/" rel="prev" title="SPOJ KQUERYO">
+                SPOJ KQUERYO <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -491,7 +501,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>

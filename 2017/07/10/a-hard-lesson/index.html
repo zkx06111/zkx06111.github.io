@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="BalancedTree," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="第一次用py写了一道正经的题目。USACO竟然也有交互题。交互的方式还是通过stdin / stdout，好神奇啊。">
-<meta name="keywords" content="BalancedTree">
+<meta name="description" content="今天XJOI比赛，我想出了B题的标算，非常开心，敲完之后和暴力拍得很溜，于是就没管了。结果测试结果是20分。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="USACO googol">
-<meta property="og:url" content="http://yoursite.com/2016/09/02/2016-09-02-usaco-googol/index.html">
+<meta property="og:title" content="沉痛的教训">
+<meta property="og:url" content="http://yoursite.com/2017/07/10/a-hard-lesson/index.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
-<meta property="og:description" content="第一次用py写了一道正经的题目。USACO竟然也有交互题。交互的方式还是通过stdin / stdout，好神奇啊。">
+<meta property="og:description" content="今天XJOI比赛，我想出了B题的标算，非常开心，敲完之后和暴力拍得很溜，于是就没管了。结果测试结果是20分。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-30T13:30:21.415Z">
+<meta property="og:updated_time" content="2018-07-30T13:14:58.178Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="USACO googol">
-<meta name="twitter:description" content="第一次用py写了一道正经的题目。USACO竟然也有交互题。交互的方式还是通过stdin / stdout，好神奇啊。">
+<meta name="twitter:title" content="沉痛的教训">
+<meta name="twitter:description" content="今天XJOI比赛，我想出了B题的标算，非常开心，敲完之后和暴力拍得很溜，于是就没管了。结果测试结果是20分。">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/09/02/2016-09-02-usaco-googol/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/10/a-hard-lesson/"/>
 
 
 
 
 
-  <title>USACO googol | zkx06111's Blog</title>
+  <title>沉痛的教训 | zkx06111's Blog</title>
   
 
 
@@ -253,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/02/2016-09-02-usaco-googol/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/10/a-hard-lesson/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zkx06111">
@@ -270,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">USACO googol</h1>
+          <h1 class="post-title" itemprop="name headline">沉痛的教训</h1>
         
 
         <div class="post-meta">
@@ -282,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-02T12:57:00+08:00">
-                2016-09-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-10T19:25:00+08:00">
+                2017-07-10
               </time>
             
 
@@ -320,20 +319,11 @@
       
 
       
-        <p>第一次用py写了一道正经的题目。USACO竟然也有交互题。交互的方式还是通过stdin / stdout，好神奇啊。</p>
+        <p>今天XJOI比赛，我想出了B题的标算，非常开心，敲完之后和暴力拍得很溜，于是就没管了。结果测试结果是20分。</p>
 <a id="more"></a>
-<p>有一棵二叉树，最多可能有$ 10 ^ {100} $个节点，对于任意节点，满足左子树比右子树大1或者相等。</p>
-<p>树根为1。允许不超过70000次询问某个节点的左右孩子。请求出这棵树的总点数。</p>
-<p>用py的一大理由就是不用写高精度蛤蛤蛤。暴力只需要从1开始，递归的询问左右孩子就好了，但这样铁定超时。</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ask</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">print</span> x</span><br><span class="line">	sys.stdout.flush()</span><br><span class="line">	<span class="keyword">return</span> [int(_) <span class="keyword">for</span> _ <span class="keyword">in</span> raw_input().split()]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">count</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">if</span> x == <span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">	lc, rc = ask(x)</span><br><span class="line">	rs = count(rc)</span><br><span class="line">	ls = count(lc)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span> + ls + rs</span><br></pre></td></tr></table></figure>
-<p>要利用题目中给的性质。在求出右子树的大小$rs$之后，左子树的大小要么是$rs + 1$，要么是$rs$，只需要判断是哪一个。所以我们写一个函数$countGiven(x, sz)$表示在已知x的子树大小为$sz$或者$sz+1$之后求究竟是哪一个。</p>
-<p>有一个有用的性质是：如果左子树大小和右子树大小之和$z$知道的话，左子树的大小就是$\lceil \frac{z}{2} \rceil$，而右子树的大小就是$\lfloor \frac{z}{2} \rfloor$。</p>
-<p>所以$x$的左右子树分别满足，$ls \in { \lceil \frac{sz}{2} \rceil , \lceil \frac{sz-1}{2} \rceil } , rs \in { \lfloor \frac{sz}{2} \rfloor, \lfloor \frac{sz-1}{2} \rfloor } $</p>
-<p>对于$sz$的奇偶性分类讨论：</p>
-<p>如果$sz \mod 2 = 0$，那么$ \lceil \frac{sz}{2} \rceil = \lceil \frac{sz-1}{2} \rceil $，所以左子树大小可以确定，右子树递归处理即可。</p>
-<p>如果$sz \mod 2 = 1$同理，右子树大小可以确定，左子树递归处理即可。</p>
-<p>来分析下询问调用的次数，每次count会询问一次，count递归的次数取决于树高。count时子树的树高是递减的，从根开始分别是$H, H - 1 … 1$。count会调用countGiven，而countGiven递归的层数就是子树的树高，每一层递归都会询问一次。所以询问的调用次数是$H + H - 1 + … + 1 = O(H ^ 2)$，这棵树相当平衡，所以是$O(\log ^2 N)$的。时间复杂度也是。</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ask</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">print</span> x</span><br><span class="line">	sys.stdout.flush()</span><br><span class="line">	<span class="keyword">return</span> [int(_) <span class="keyword">for</span> _ <span class="keyword">in</span> raw_input().split()]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">countGiven</span><span class="params">(x, sz)</span>:</span> <span class="comment"># ret = sz or ret = sz + 1, get ret</span></span><br><span class="line">	<span class="keyword">if</span> x == <span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">	lc, rc = ask(x)</span><br><span class="line">	<span class="keyword">if</span> sz % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">		rs = (sz - <span class="number">1</span>) / <span class="number">2</span></span><br><span class="line">		ls = countGiven(lc, rs)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span> + ls + rs</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		ls = sz / <span class="number">2</span></span><br><span class="line">		rs = countGiven(rc, ls - <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span> + ls + rs</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">count</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">if</span> x == <span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">	lc, rc = ask(x)</span><br><span class="line">	rs = count(rc)</span><br><span class="line">	ls = countGiven(lc, rs)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span> + ls + rs</span><br><span class="line"></span><br><span class="line">ans = count(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"Answer %d"</span> % ans</span><br></pre></td></tr></table></figure>
+<p>我感到怀疑人生，NOIP D1T3也是自以为A掉，结果写挂，THUSC T3也是自以为A掉，结果写挂，今天又来一次，原因竟是在取第k大串的时候没有考虑重复，从一开始写暴力就没有考虑，自然也没办法拍出错误。上一次类似的拍上却跪掉的情况，发生于我造树的时候父亲的标号小于孩子。</p>
+<p>非常担心NOI的时候也发生类似的事情，无话可说。各种过往的失败涌上心头，难受极了。</p>
+<p>离OI生涯的结束已经没有几天了，我真的希望结果不要太惨。</p>
 
       
     </div>
@@ -349,12 +339,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/BalancedTree/" rel="tag"># BalancedTree</a>
-          
-        </div>
-      
 
       
       
@@ -364,8 +348,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/01/2016-09-01-spoj-kqueryo/" rel="next" title="SPOJ KQUERYO">
-                <i class="fa fa-chevron-left"></i> SPOJ KQUERYO
+              <a href="/2017/07/06/bzoj-3561-dzy-loves-math-vi/" rel="next" title="BZOJ 3561 DZY Loves Math VI">
+                <i class="fa fa-chevron-left"></i> BZOJ 3561 DZY Loves Math VI
               </a>
             
           </div>
@@ -374,8 +358,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/05/2017-01-05-srm-460-1-1000pts-thecitiesandroads/" rel="prev" title="SRM 460-1 1000pts TheCitiesAndRoads">
-                SRM 460-1 1000pts TheCitiesAndRoads <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/12/everyday-life/" rel="prev" title="不定期更新的日常">
+                不定期更新的日常 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
