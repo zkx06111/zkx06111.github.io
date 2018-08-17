@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="GraphTheory,ICPC," />
+  <meta name="keywords" content="DataStructures,Ad-Hoc,ICPC," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="给出一个n个点的图，m个操作，一类是加边，一类是删边，还有一类是询问某些信息。可以使用LCT维护删除时间最大生成树。为了支持边权，对于每条边建立一个点。把所有原本点的点权设为INF，边对应的点的点权设为边权，这样就可以支持对边权的询问了。">
-<meta name="keywords" content="GraphTheory,ICPC">
+<meta name="description" content="你有一个矩形网格$r,c\le2000$，每个格子里有一个数字，最左边列和最右边列相邻，最上边行和最下边行相邻。一开始你在$(1,1)$。从$(i,j)$出发移动一次，到达$(i+1,j),(i+1,j-1),(i+1,j+1)$中数字最大的那个。有$m\le5000$个操作，要么是移动$k\le10^9$步并求出所到的位置，要么是修改$(a,b)$的数字为$e$。">
+<meta name="keywords" content="DataStructures,Ad-Hoc,ICPC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用LCT解决一类动态图问题">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/solving-dynamic-connectivity-problems-with-lct/index.html">
+<meta property="og:title" content="CERC2017 - Donut Drone">
+<meta property="og:url" content="http://yoursite.com/2018/08/16/donut-drone/index.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
-<meta property="og:description" content="给出一个n个点的图，m个操作，一类是加边，一类是删边，还有一类是询问某些信息。可以使用LCT维护删除时间最大生成树。为了支持边权，对于每条边建立一个点。把所有原本点的点权设为INF，边对应的点的点权设为边权，这样就可以支持对边权的询问了。">
+<meta property="og:description" content="你有一个矩形网格$r,c\le2000$，每个格子里有一个数字，最左边列和最右边列相邻，最上边行和最下边行相邻。一开始你在$(1,1)$。从$(i,j)$出发移动一次，到达$(i+1,j),(i+1,j-1),(i+1,j+1)$中数字最大的那个。有$m\le5000$个操作，要么是移动$k\le10^9$步并求出所到的位置，要么是修改$(a,b)$的数字为$e$。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-16T12:20:46.281Z">
+<meta property="og:image" content="http://yoursite.com/2018/08/16/donut-drone/tmp.png">
+<meta property="og:updated_time" content="2018-08-16T14:00:25.452Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用LCT解决一类动态图问题">
-<meta name="twitter:description" content="给出一个n个点的图，m个操作，一类是加边，一类是删边，还有一类是询问某些信息。可以使用LCT维护删除时间最大生成树。为了支持边权，对于每条边建立一个点。把所有原本点的点权设为INF，边对应的点的点权设为边权，这样就可以支持对边权的询问了。">
+<meta name="twitter:title" content="CERC2017 - Donut Drone">
+<meta name="twitter:description" content="你有一个矩形网格$r,c\le2000$，每个格子里有一个数字，最左边列和最右边列相邻，最上边行和最下边行相邻。一开始你在$(1,1)$。从$(i,j)$出发移动一次，到达$(i+1,j),(i+1,j-1),(i+1,j+1)$中数字最大的那个。有$m\le5000$个操作，要么是移动$k\le10^9$步并求出所到的位置，要么是修改$(a,b)$的数字为$e$。">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/16/donut-drone/tmp.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/solving-dynamic-connectivity-problems-with-lct/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/16/donut-drone/"/>
 
 
 
 
 
-  <title>用LCT解决一类动态图问题 | zkx06111's Blog</title>
+  <title>CERC2017 - Donut Drone | zkx06111's Blog</title>
   
 
 
@@ -253,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/solving-dynamic-connectivity-problems-with-lct/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/16/donut-drone/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zkx06111">
@@ -270,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用LCT解决一类动态图问题</h1>
+          <h1 class="post-title" itemprop="name headline">CERC2017 - Donut Drone</h1>
         
 
         <div class="post-meta">
@@ -282,8 +284,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T10:40:00+08:00">
-                2017-02-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-16T20:09:52+08:00">
+                2018-08-16
               </time>
             
 
@@ -320,65 +322,13 @@
       
 
       
-        <p>给出一个n个点的图，m个操作，一类是加边，一类是删边，还有一类是询问某些信息。可以使用LCT维护删除时间最大生成树。为了支持边权，对于每条边建立一个点。把所有原本点的点权设为INF，边对应的点的点权设为边权，这样就可以支持对边权的询问了。</p>
+        <p>你有一个矩形网格$r,c\le2000$，每个格子里有一个数字，最左边列和最右边列相邻，最上边行和最下边行相邻。一开始你在$(1,1)$。从$(i,j)$出发移动一次，到达$(i+1,j),(i+1,j-1),(i+1,j+1)$中数字最大的那个。有$m\le5000$个操作，要么是移动$k\le10^9$步并求出所到的位置，要么是修改$(a,b)$的数字为$e$。</p>
 <a id="more"></a>
-<h2 id="BZOJ-4025"><a href="#BZOJ-4025" class="headerlink" title="BZOJ 4025"></a>BZOJ 4025</h2><p>询问内容：是否为二分图。</p>
-<p>加边操作：</p>
-<ul>
-<li>u, v不连通，直接连接。</li>
-<li>连通，并且w(u, v)比u -&gt; v链上的最小边还小<ul>
-<li>u -&gt; v链上有偶数个点，连上的话是偶环，不会产生影响，直接无视。</li>
-<li>u -&gt; v链上有奇数个点，由于w(u, v)是最小的（意味着最早删除），在它删除之前都不会是二分图，给该边做上标记。</li>
-</ul>
-</li>
-<li>连通，并且w(u, v)比大于等于u -&gt; v链上的最小边<ul>
-<li>断开最小边，连接u -&gt; v，对于最小边做第二种操作。</li>
-</ul>
-</li>
-</ul>
-<p>删边操作：</p>
-<ul>
-<li>u, v是树边，直接断开。</li>
-<li>不是树边，如果有标记的话清楚标记。</li>
-</ul>
-<p>当标记总数为0的时候是二分图，否则不是。</p>
-<p><a href="http://paste.ubuntu.com/24004845/" target="_blank" rel="noopener">本题代码。</a></p>
-<h2 id="CF-Gym-100551-Dynamic-Connectivity-Contest"><a href="#CF-Gym-100551-Dynamic-Connectivity-Contest" class="headerlink" title="CF Gym 100551 Dynamic Connectivity Contest"></a>CF Gym 100551 Dynamic Connectivity Contest</h2><h3 id="A-Connect-and-Disconnect"><a href="#A-Connect-and-Disconnect" class="headerlink" title="A. Connect and Disconnect"></a>A. Connect and Disconnect</h3><p>加边、删边、询问连通块个数。</p>
-<p>初始答案为n。</p>
-<p>加边操作：</p>
-<ul>
-<li>不连通，直接连接，答案减一</li>
-<li>连通，并且w(u, v)比u -&gt; v链上的最小边大<ul>
-<li>断开最小边，连接u -&gt; v。</li>
-</ul>
-</li>
-<li>连通，并且w(u, v)比小于等于u -&gt; v链上的最小边<ul>
-<li>直接无视。</li>
-</ul>
-</li>
-</ul>
-<p>删边操作：</p>
-<ul>
-<li>u, v是树边<ul>
-<li>断开u, v，答案加一。因为当前边是已经加入的边里面删除时间最迟的，能够连接u, v的其他边要么已经被删除，要么还没被加入，所以可以放心地答案加一。</li>
-</ul>
-</li>
-<li>u, v不是树边，无视就好，对答案没有影响。</li>
-</ul>
-<p>值得注意的是LCT在查询u, v上最小值的时候不要忘记了splay，另外要保证u &lt; v，以防出现问题。</p>
-<p><a href="http://paste.ubuntu.com/24004853/" target="_blank" rel="noopener">本题代码。</a></p>
-<h3 id="B-GraphAero"><a href="#B-GraphAero" class="headerlink" title="B. GraphAero"></a>B. GraphAero</h3><p>只有加边，问图的桥数量。维护LCT，每条边有是否为桥的标记。</p>
-<p>如果不连通，就link，并打上标记。如果连通，就给答案减去链上桥标和，然后清空标记。</p>
-<p>值得注意的是打覆盖标记的时候sum也要修改，因为只可能覆盖为0所以我偷了个懒，直接置为0了。还有就是调试信息的输出如果不删的话很耗费时间。</p>
-<p><a href="http://paste.ubuntu.com/24004869/" target="_blank" rel="noopener">本题代码。</a></p>
-<h3 id="C-Bridges-in-a-Tree"><a href="#C-Bridges-in-a-Tree" class="headerlink" title="C. Bridges in a Tree"></a>C. Bridges in a Tree</h3><p>一棵树，每次加一组边，询问桥的数量。和B题一样做，暴力撤销就好了，我没写。</p>
-<h3 id="E-Disconnected-Graph"><a href="#E-Disconnected-Graph" class="headerlink" title="E. Disconnected Graph"></a>E. Disconnected Graph</h3><p>给一个图，没有操作，每次询问删除一组边之后是否连通，可以规约到A题，连通块个数为1的时候就是连通的，我没写。</p>
-<h2 id="BZOJ-3237"><a href="#BZOJ-3237" class="headerlink" title="BZOJ 3237"></a>BZOJ 3237</h2><p>似乎和E题是一模一样，连数据范围都没有变过的。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li><del>写了好几遍LCT</del></li>
-<li><del>学会了LCT的调试技巧？</del></li>
-<li>这类题目的共同点在于在加边u, v时，如果u, v不连通，就只记录它对询问的影响，而不是实际上连接。而对于有删边操作的题目，维护删除时间最大生成树就可以让影响最迟消失的操作留在树上，影响较早消失的记录影响。</li>
-</ul>
+<h3 id="好想难写做法"><a href="#好想难写做法" class="headerlink" title="好想难写做法"></a>好想难写做法</h3><p>每个点只有一条出边，故这是一个基环内向森林，每次修改权值最多会导致3条边发生改变，因此只需要用LCT维护就可以了。有一些细节。复杂度$O((rc+m)\log (rc))$。</p>
+<p>该做法与题目的性质没有丝毫关系，而且可以支持大很多的$m$，所以不太可能是标算。</p>
+<h3 id="难想好写做法"><a href="#难想好写做法" class="headerlink" title="难想好写做法"></a>难想好写做法</h3><p>对于第一行的$c$个位置处理出$J_{1..c}$，$J _{i}$表示从$(1,i)$出发，走$r$步到达的位置为$(r,J_i)$。根据鸽巢原理，从第一行的任意一个位置出发，最多跳$c$个$r$步一定会到达原位置。这样，利用$J$就可以$O(r+c)$的处理移动操作了。</p>
+<p><img src="/2018/08/16/donut-drone/tmp.png" alt="tmp"></p>
+<p>考虑如何处理修改，有一个性质：从第一行出发，走相同步数到达同一位置的起点一定是环上的连续一段。维护$L_{ij},R_{ij}$表示从第一行的$[L_{ij},R_{ij}]$出发可以走到$(i,j)$。修改时，可以据此维护$L,R$，进而维护$J$。</p>
 
       
     </div>
@@ -396,7 +346,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/GraphTheory/" rel="tag"># GraphTheory</a>
+            <a href="/tags/DataStructures/" rel="tag"># DataStructures</a>
+          
+            <a href="/tags/Ad-Hoc/" rel="tag"># Ad-Hoc</a>
           
             <a href="/tags/ICPC/" rel="tag"># ICPC</a>
           
@@ -411,8 +363,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/25/srm-705-450pts-movingtokens/" rel="next" title="SRM 705 450pts MovingTokens">
-                <i class="fa fa-chevron-left"></i> SRM 705 450pts MovingTokens
+              <a href="/2018/08/13/kd-odd-circle-gauss/" rel="next" title="kd-odd-circle-gauss">
+                <i class="fa fa-chevron-left"></i> kd-odd-circle-gauss
               </a>
             
           </div>
@@ -421,8 +373,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/06/bzoj-3561-dzy-loves-math-vi/" rel="prev" title="BZOJ 3561 DZY Loves Math VI">
-                BZOJ 3561 DZY Loves Math VI <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/17/everyday-life/" rel="prev" title="不定期更新的日常">
+                不定期更新的日常 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -546,7 +498,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ-4025"><span class="nav-number">1.</span> <span class="nav-text">BZOJ 4025</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CF-Gym-100551-Dynamic-Connectivity-Contest"><span class="nav-number">2.</span> <span class="nav-text">CF Gym 100551 Dynamic Connectivity Contest</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Connect-and-Disconnect"><span class="nav-number">2.1.</span> <span class="nav-text">A. Connect and Disconnect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-GraphAero"><span class="nav-number">2.2.</span> <span class="nav-text">B. GraphAero</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-Bridges-in-a-Tree"><span class="nav-number">2.3.</span> <span class="nav-text">C. Bridges in a Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-Disconnected-Graph"><span class="nav-number">2.4.</span> <span class="nav-text">E. Disconnected Graph</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ-3237"><span class="nav-number">3.</span> <span class="nav-text">BZOJ 3237</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#好想难写做法"><span class="nav-number">1.</span> <span class="nav-text">好想难写做法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#难想好写做法"><span class="nav-number">2.</span> <span class="nav-text">难想好写做法</span></a></li></ol></div>
             
 
           </div>

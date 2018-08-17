@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="GraphTheory,ICPC," />
+  <meta name="keywords" content="Life," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="给出一个n个点的图，m个操作，一类是加边，一类是删边，还有一类是询问某些信息。可以使用LCT维护删除时间最大生成树。为了支持边权，对于每条边建立一个点。把所有原本点的点权设为INF，边对应的点的点权设为边权，这样就可以支持对边权的询问了。">
-<meta name="keywords" content="GraphTheory,ICPC">
+<meta name="description" content="这是个栈。尽量不让它掉出博客第一页吧。 目前更新到了2018-08-17。">
+<meta name="keywords" content="Life">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用LCT解决一类动态图问题">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/solving-dynamic-connectivity-problems-with-lct/index.html">
+<meta property="og:title" content="不定期更新的日常">
+<meta property="og:url" content="http://yoursite.com/2018/08/17/everyday-life/index.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
-<meta property="og:description" content="给出一个n个点的图，m个操作，一类是加边，一类是删边，还有一类是询问某些信息。可以使用LCT维护删除时间最大生成树。为了支持边权，对于每条边建立一个点。把所有原本点的点权设为INF，边对应的点的点权设为边权，这样就可以支持对边权的询问了。">
+<meta property="og:description" content="这是个栈。尽量不让它掉出博客第一页吧。 目前更新到了2018-08-17。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-16T12:20:46.281Z">
+<meta property="og:updated_time" content="2018-08-17T14:15:52.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用LCT解决一类动态图问题">
-<meta name="twitter:description" content="给出一个n个点的图，m个操作，一类是加边，一类是删边，还有一类是询问某些信息。可以使用LCT维护删除时间最大生成树。为了支持边权，对于每条边建立一个点。把所有原本点的点权设为INF，边对应的点的点权设为边权，这样就可以支持对边权的询问了。">
+<meta name="twitter:title" content="不定期更新的日常">
+<meta name="twitter:description" content="这是个栈。尽量不让它掉出博客第一页吧。 目前更新到了2018-08-17。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/solving-dynamic-connectivity-problems-with-lct/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/17/everyday-life/"/>
 
 
 
 
 
-  <title>用LCT解决一类动态图问题 | zkx06111's Blog</title>
+  <title>不定期更新的日常 | zkx06111's Blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/solving-dynamic-connectivity-problems-with-lct/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/17/everyday-life/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zkx06111">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用LCT解决一类动态图问题</h1>
+          <h1 class="post-title" itemprop="name headline">不定期更新的日常</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T10:40:00+08:00">
-                2017-02-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-17T21:20:00+08:00">
+                2018-08-17
               </time>
             
 
@@ -320,65 +320,17 @@
       
 
       
-        <p>给出一个n个点的图，m个操作，一类是加边，一类是删边，还有一类是询问某些信息。可以使用LCT维护删除时间最大生成树。为了支持边权，对于每条边建立一个点。把所有原本点的点权设为INF，边对应的点的点权设为边权，这样就可以支持对边权的询问了。</p>
+        <p>这是个栈。尽量不让它掉出博客第一页吧。</p>
+<p>目前更新到了2018-08-17。</p>
 <a id="more"></a>
-<h2 id="BZOJ-4025"><a href="#BZOJ-4025" class="headerlink" title="BZOJ 4025"></a>BZOJ 4025</h2><p>询问内容：是否为二分图。</p>
-<p>加边操作：</p>
-<ul>
-<li>u, v不连通，直接连接。</li>
-<li>连通，并且w(u, v)比u -&gt; v链上的最小边还小<ul>
-<li>u -&gt; v链上有偶数个点，连上的话是偶环，不会产生影响，直接无视。</li>
-<li>u -&gt; v链上有奇数个点，由于w(u, v)是最小的（意味着最早删除），在它删除之前都不会是二分图，给该边做上标记。</li>
-</ul>
-</li>
-<li>连通，并且w(u, v)比大于等于u -&gt; v链上的最小边<ul>
-<li>断开最小边，连接u -&gt; v，对于最小边做第二种操作。</li>
-</ul>
-</li>
-</ul>
-<p>删边操作：</p>
-<ul>
-<li>u, v是树边，直接断开。</li>
-<li>不是树边，如果有标记的话清楚标记。</li>
-</ul>
-<p>当标记总数为0的时候是二分图，否则不是。</p>
-<p><a href="http://paste.ubuntu.com/24004845/" target="_blank" rel="noopener">本题代码。</a></p>
-<h2 id="CF-Gym-100551-Dynamic-Connectivity-Contest"><a href="#CF-Gym-100551-Dynamic-Connectivity-Contest" class="headerlink" title="CF Gym 100551 Dynamic Connectivity Contest"></a>CF Gym 100551 Dynamic Connectivity Contest</h2><h3 id="A-Connect-and-Disconnect"><a href="#A-Connect-and-Disconnect" class="headerlink" title="A. Connect and Disconnect"></a>A. Connect and Disconnect</h3><p>加边、删边、询问连通块个数。</p>
-<p>初始答案为n。</p>
-<p>加边操作：</p>
-<ul>
-<li>不连通，直接连接，答案减一</li>
-<li>连通，并且w(u, v)比u -&gt; v链上的最小边大<ul>
-<li>断开最小边，连接u -&gt; v。</li>
-</ul>
-</li>
-<li>连通，并且w(u, v)比小于等于u -&gt; v链上的最小边<ul>
-<li>直接无视。</li>
-</ul>
-</li>
-</ul>
-<p>删边操作：</p>
-<ul>
-<li>u, v是树边<ul>
-<li>断开u, v，答案加一。因为当前边是已经加入的边里面删除时间最迟的，能够连接u, v的其他边要么已经被删除，要么还没被加入，所以可以放心地答案加一。</li>
-</ul>
-</li>
-<li>u, v不是树边，无视就好，对答案没有影响。</li>
-</ul>
-<p>值得注意的是LCT在查询u, v上最小值的时候不要忘记了splay，另外要保证u &lt; v，以防出现问题。</p>
-<p><a href="http://paste.ubuntu.com/24004853/" target="_blank" rel="noopener">本题代码。</a></p>
-<h3 id="B-GraphAero"><a href="#B-GraphAero" class="headerlink" title="B. GraphAero"></a>B. GraphAero</h3><p>只有加边，问图的桥数量。维护LCT，每条边有是否为桥的标记。</p>
-<p>如果不连通，就link，并打上标记。如果连通，就给答案减去链上桥标和，然后清空标记。</p>
-<p>值得注意的是打覆盖标记的时候sum也要修改，因为只可能覆盖为0所以我偷了个懒，直接置为0了。还有就是调试信息的输出如果不删的话很耗费时间。</p>
-<p><a href="http://paste.ubuntu.com/24004869/" target="_blank" rel="noopener">本题代码。</a></p>
-<h3 id="C-Bridges-in-a-Tree"><a href="#C-Bridges-in-a-Tree" class="headerlink" title="C. Bridges in a Tree"></a>C. Bridges in a Tree</h3><p>一棵树，每次加一组边，询问桥的数量。和B题一样做，暴力撤销就好了，我没写。</p>
-<h3 id="E-Disconnected-Graph"><a href="#E-Disconnected-Graph" class="headerlink" title="E. Disconnected Graph"></a>E. Disconnected Graph</h3><p>给一个图，没有操作，每次询问删除一组边之后是否连通，可以规约到A题，连通块个数为1的时候就是连通的，我没写。</p>
-<h2 id="BZOJ-3237"><a href="#BZOJ-3237" class="headerlink" title="BZOJ 3237"></a>BZOJ 3237</h2><p>似乎和E题是一模一样，连数据范围都没有变过的。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li><del>写了好几遍LCT</del></li>
-<li><del>学会了LCT的调试技巧？</del></li>
-<li>这类题目的共同点在于在加边u, v时，如果u, v不连通，就只记录它对询问的影响，而不是实际上连接。而对于有删边操作的题目，维护删除时间最大生成树就可以让影响最迟消失的操作留在树上，影响较早消失的记录影响。</li>
-</ul>
+<h3 id="2018-08-17"><a href="#2018-08-17" class="headerlink" title="2018-08-17"></a>2018-08-17</h3><p>ACM真有意思。</p>
+<h3 id="2018-08-12"><a href="#2018-08-12" class="headerlink" title="2018-08-12"></a>2018-08-12</h3><p>竺考初审没过，竟然有一丝轻松，可以好好打acm了哈哈。</p>
+<h3 id="2018-08-11"><a href="#2018-08-11" class="headerlink" title="2018-08-11"></a>2018-08-11</h3><p>又滚粗了，怀疑人生。</p>
+<p>竺院考试根本没空准备。</p>
+<p>累得不想说话。</p>
+<h3 id="2018-08-09"><a href="#2018-08-09" class="headerlink" title="2018-08-09"></a>2018-08-09</h3><p>浙大八月集训d1滚粗了QAQ。竺考准备好忙啊。</p>
+<h3 id="2018-08-07"><a href="#2018-08-07" class="headerlink" title="2018-08-07"></a>2018-08-07</h3><p>提前到达紫金港，第一次见到zqq，感觉他各种认真努力+身体素质好，值得学习。</p>
+<h3 id="2018-08-06"><a href="#2018-08-06" class="headerlink" title="2018-08-06"></a>2018-08-06</h3><p>昨天把vps搞好了，可以科学上网了。今天加入了口哨爱好者交流群，发现好多少战爱好者，双重的幸福。感觉自己最近不务正业啊。</p>
 
       
     </div>
@@ -396,9 +348,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/GraphTheory/" rel="tag"># GraphTheory</a>
-          
-            <a href="/tags/ICPC/" rel="tag"># ICPC</a>
+            <a href="/tags/Life/" rel="tag"># Life</a>
           
         </div>
       
@@ -411,8 +361,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/25/srm-705-450pts-movingtokens/" rel="next" title="SRM 705 450pts MovingTokens">
-                <i class="fa fa-chevron-left"></i> SRM 705 450pts MovingTokens
+              <a href="/2018/08/16/donut-drone/" rel="next" title="CERC2017 - Donut Drone">
+                <i class="fa fa-chevron-left"></i> CERC2017 - Donut Drone
               </a>
             
           </div>
@@ -420,10 +370,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/06/bzoj-3561-dzy-loves-math-vi/" rel="prev" title="BZOJ 3561 DZY Loves Math VI">
-                BZOJ 3561 DZY Loves Math VI <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -546,7 +492,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ-4025"><span class="nav-number">1.</span> <span class="nav-text">BZOJ 4025</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CF-Gym-100551-Dynamic-Connectivity-Contest"><span class="nav-number">2.</span> <span class="nav-text">CF Gym 100551 Dynamic Connectivity Contest</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Connect-and-Disconnect"><span class="nav-number">2.1.</span> <span class="nav-text">A. Connect and Disconnect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-GraphAero"><span class="nav-number">2.2.</span> <span class="nav-text">B. GraphAero</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-Bridges-in-a-Tree"><span class="nav-number">2.3.</span> <span class="nav-text">C. Bridges in a Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-Disconnected-Graph"><span class="nav-number">2.4.</span> <span class="nav-text">E. Disconnected Graph</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ-3237"><span class="nav-number">3.</span> <span class="nav-text">BZOJ 3237</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-17"><span class="nav-number">1.</span> <span class="nav-text">2018-08-17</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-12"><span class="nav-number">2.</span> <span class="nav-text">2018-08-12</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-11"><span class="nav-number">3.</span> <span class="nav-text">2018-08-11</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-09"><span class="nav-number">4.</span> <span class="nav-text">2018-08-09</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-07"><span class="nav-number">5.</span> <span class="nav-text">2018-08-07</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2018-08-06"><span class="nav-number">6.</span> <span class="nav-text">2018-08-06</span></a></li></ol></div>
             
 
           </div>
