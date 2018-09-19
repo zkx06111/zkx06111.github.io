@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
 <meta property="og:description" content="通过给出$m\le 20$个质因子$p_i$及其次数$q_i$的方法给出$n$，求$\sum_{d|n}\phi(d)\times \frac{n}{d}$。$T\le 20$。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-19T11:33:21.669Z">
+<meta property="og:updated_time" content="2018-09-19T11:34:29.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Master of Phi">
 <meta name="twitter:description" content="通过给出$m\le 20$个质因子$p_i$及其次数$q_i$的方法给出$n$，求$\sum_{d|n}\phi(d)\times \frac{n}{d}$。$T\le 20$。">
@@ -323,7 +323,7 @@
         <p>通过给出$m\le 20$个质因子$p_i$及其次数$q_i$的方法给出$n$，求$\sum_{d|n}\phi(d)\times \frac{n}{d}$。$T\le 20$。</p>
 <a id="more"></a>
 <p>我也不知道为啥数据这么小。</p>
-<p>$\sum_{d|n}\phi(d)\times \frac{n}{d}=\sum <em>{d|n}(d\prod</em>{p|d}(1-\frac{1}{p}))\times \frac{n}{d}$</p>
+<p>$\sum_{d|n}\phi(d)\times \frac{n}{d}=\sum_{d|n}(d\prod_{p|d}(1-\frac{1}{p}))\times\frac{n}{d}$</p>
 <p>$=n\sum_{d|n}\prod_{p|d}(1-\frac{1}{p})$</p>
 <p>最外面的$n$最后乘上去就行。</p>
 <p>考虑某个质因子集合$S$的贡献，发现是$\prod_{p_i\in S}  (1-\frac{1}{p_i})q_i$。</p>
