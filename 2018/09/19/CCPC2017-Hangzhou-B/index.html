@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ICPC,NumberTheory,Combinatorics," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="今天XJOI比赛，我想出了B题的标算，非常开心，敲完之后和暴力拍得很溜，于是就没管了。结果测试结果是20分。">
+<meta name="description" content="通过给出$m\le 20$个质因子$p_i$及其次数$q_i$的方法给出$n$，求$\sum_{d|n}\phi(d)\times \frac{n}{d}$。$T\le 20$。">
+<meta name="keywords" content="ICPC,NumberTheory,Combinatorics">
 <meta property="og:type" content="article">
-<meta property="og:title" content="沉痛的教训">
-<meta property="og:url" content="http://yoursite.com/2017/07/10/a-hard-lesson/index.html">
+<meta property="og:title" content="Master of Phi">
+<meta property="og:url" content="http://yoursite.com/2018/09/19/CCPC2017-Hangzhou-B/index.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
-<meta property="og:description" content="今天XJOI比赛，我想出了B题的标算，非常开心，敲完之后和暴力拍得很溜，于是就没管了。结果测试结果是20分。">
+<meta property="og:description" content="通过给出$m\le 20$个质因子$p_i$及其次数$q_i$的方法给出$n$，求$\sum_{d|n}\phi(d)\times \frac{n}{d}$。$T\le 20$。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-30T13:14:58.178Z">
+<meta property="og:updated_time" content="2018-09-19T11:30:00.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="沉痛的教训">
-<meta name="twitter:description" content="今天XJOI比赛，我想出了B题的标算，非常开心，敲完之后和暴力拍得很溜，于是就没管了。结果测试结果是20分。">
+<meta name="twitter:title" content="Master of Phi">
+<meta name="twitter:description" content="通过给出$m\le 20$个质因子$p_i$及其次数$q_i$的方法给出$n$，求$\sum_{d|n}\phi(d)\times \frac{n}{d}$。$T\le 20$。">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/10/a-hard-lesson/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/19/CCPC2017-Hangzhou-B/"/>
 
 
 
 
 
-  <title>沉痛的教训 | zkx06111's Blog</title>
+  <title>Master of Phi | zkx06111's Blog</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/10/a-hard-lesson/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/19/CCPC2017-Hangzhou-B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zkx06111">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">沉痛的教训</h1>
+          <h1 class="post-title" itemprop="name headline">Master of Phi</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-10T19:25:00+08:00">
-                2017-07-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-19T19:19:52+08:00">
+                2018-09-19
               </time>
             
 
@@ -319,11 +320,15 @@
       
 
       
-        <p>今天XJOI比赛，我想出了B题的标算，非常开心，敲完之后和暴力拍得很溜，于是就没管了。结果测试结果是20分。</p>
+        <p>通过给出$m\le 20$个质因子$p_i$及其次数$q_i$的方法给出$n$，求$\sum_{d|n}\phi(d)\times \frac{n}{d}$。$T\le 20$。</p>
 <a id="more"></a>
-<p>我感到怀疑人生，NOIP D1T3也是自以为A掉，结果写挂，THUSC T3也是自以为A掉，结果写挂，今天又来一次，原因竟是在取第k大串的时候没有考虑重复，从一开始写暴力就没有考虑，自然也没办法拍出错误。上一次类似的拍上却跪掉的情况，发生于我造树的时候父亲的标号小于孩子。</p>
-<p>非常担心NOI的时候也发生类似的事情，无话可说。各种过往的失败涌上心头，难受极了。</p>
-<p>离OI生涯的结束已经没有几天了，我真的希望结果不要太惨。</p>
+<p>我也不知道为啥数据这么小。</p>
+<p>$\sum _{d|n}\phi(d)\times \frac{n}{d}=\sum <em>{d|n}(d\prod</em>{p|d}(1-\frac{1}{p}))\times \frac{n}{d}=n\sum_{d|n}\prod_{p|d}(1-\frac{1}{p})$</p>
+<p>最外面的$n$最后乘上去就行。</p>
+<p>考虑某个质因子集合$S$的贡献，发现是$\prod_{p_i\in S}  (1-\frac{1}{p_i})q_i$。</p>
+<p>由于每个质因子都可以选或不选，所以总的贡献就是$\prod _{i=1}^m(1+(1-\frac{1}{p_i}q_i))$，$O(m)$算一下就好了。</p>
+<p>所以其实可以加强对吧？</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,a,b) for(int i=a;i&lt;=b;++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> per(i,a,b) for(int i=a;i&gt;=b;--i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rvc(i,S) for(int i=0;i&lt;S.size();++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> se second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> debug(...) fprintf(stderr,__VA_ARGS__)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; pii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vi;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mo=<span class="number">998244353</span>;</span><br><span class="line"><span class="keyword">int</span> m;</span><br><span class="line">LL pi[<span class="number">25</span>],qi[<span class="number">25</span>],inv[<span class="number">25</span>];</span><br><span class="line">LL cc[<span class="number">25</span>];</span><br><span class="line"></span><br><span class="line"><span class="function">LL <span class="title">pwr</span><span class="params">(LL a,LL b)</span></span>&#123;</span><br><span class="line">	LL res=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(;b;b&gt;&gt;=<span class="number">1</span>,(a*=a)%=mo)</span><br><span class="line">		<span class="keyword">if</span>(b&amp;<span class="number">1</span>)(res*=a)%=mo;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(LL &amp;a,LL b)</span></span>&#123;</span><br><span class="line">	a+=b;</span><br><span class="line">	<span class="keyword">if</span>(a&gt;=mo)a-=mo;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;m;</span><br><span class="line">	rep(i,<span class="number">0</span>,m<span class="number">-1</span>)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;pi[i]&gt;&gt;qi[i];</span><br><span class="line">		inv[i]=pwr(pi[i],mo<span class="number">-2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	LL prod=<span class="number">1</span>;</span><br><span class="line">	rep(j,<span class="number">0</span>,m<span class="number">-1</span>)</span><br><span class="line">		(prod*=(<span class="number">1</span>+(pi[j]<span class="number">-1</span>)*inv[j]%mo*qi[j]%mo))%=mo;</span><br><span class="line">	</span><br><span class="line">	rep(i,<span class="number">0</span>,m<span class="number">-1</span>)</span><br><span class="line">		(prod*=pwr(pi[i],qi[i]))%=mo;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;prod&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	<span class="keyword">int</span> T;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;T;</span><br><span class="line">	<span class="keyword">while</span>(T--)solve();	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -339,6 +344,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/ICPC/" rel="tag"># ICPC</a>
+          
+            <a href="/tags/NumberTheory/" rel="tag"># NumberTheory</a>
+          
+            <a href="/tags/Combinatorics/" rel="tag"># Combinatorics</a>
+          
+        </div>
+      
 
       
       
@@ -348,8 +363,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/06/bzoj-3561-dzy-loves-math-vi/" rel="next" title="BZOJ 3561 DZY Loves Math VI">
-                <i class="fa fa-chevron-left"></i> BZOJ 3561 DZY Loves Math VI
+              <a href="/2018/09/18/inv-for-dummies/" rel="next" title="傻瓜式线性逆元">
+                <i class="fa fa-chevron-left"></i> 傻瓜式线性逆元
               </a>
             
           </div>
@@ -357,10 +372,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/13/kd-odd-circle-gauss/" rel="prev" title="kd-odd-circle-gauss">
-                kd-odd-circle-gauss <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
