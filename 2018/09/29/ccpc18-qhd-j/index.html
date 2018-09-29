@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
 <meta property="og:description" content="给你一个序列$A_{1..n}$，其中$n\le 2\times 10^5$，在两个相邻的数之间插入加号或乘号的方法有$2^{n-1}$种。这些插入方法得到的计算结果的和称为这个序列的分数。有$Q$次询问，每次询问会修改一个数字的值，问修改之后序列的分数。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-29T09:38:03.533Z">
+<meta property="og:updated_time" content="2018-09-29T09:40:18.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CCPC18秦皇岛J. Yazid&#39;s Sequence">
 <meta name="twitter:description" content="给你一个序列$A_{1..n}$，其中$n\le 2\times 10^5$，在两个相邻的数之间插入加号或乘号的方法有$2^{n-1}$种。这些插入方法得到的计算结果的和称为这个序列的分数。有$Q$次询问，每次询问会修改一个数字的值，问修改之后序列的分数。">
@@ -326,9 +326,9 @@
 <p>定义$S_i$为序列$A_{1..i}$的分数，定义$T_i$为序列$A_{1..i}$在插入符号之后，最长的一段连乘后缀的贡献之和。</p>
 <p>以$A={1,2,3,4}$为例，$T_4=4\times2^2+(3\times 4)\times 2^1+(2\times 3\times 4)\times 2^0+1\times 2 \times 3 \times 4$。要乘以$2$的幂是因为除了连乘前面第一个符号确定是加号以外，其他前面的符号可以任取。</p>
 <p>那么有$S_1=T_1=A_1$，$i\ge2$ 时</p>
-<p>$T_i=a_iT_{i-1}+a_i\times2^{i-2}\ S_i=(S_{i-1}+a_i\times2^{i-2})+(S_{i-1}-T_{i-1}+T_i-a_i\times2^{i-2})\=2S_{i-1}+(a_i-1)T_{i-1}+a_i\times2^{i-2}$</p>
+<p>$T_i=a_iT_{i-1}+a_i\times2^{i-2}\ S_i=(S_{i-1}+a_i\times2^{i-2})+(S_{i-1}-T_{i-1}+T_i-a_i\times2^{i-2}) \ =2S_{i-1}+(a_i-1)T_{i-1}+a_i\times2^{i-2}$</p>
 <p>那么就可以写成矩阵乘法的形式。</p>
-<p>$\begin{gather<em>}\begin{bmatrix}S_{i-1} &amp; T_{i-1}&amp;2^{i-2}\end{bmatrix}\times\begin{bmatrix}2&amp;0&amp;0\a_i-1&amp;a_i&amp;0\a_i&amp;a_i&amp;2\end{bmatrix}=\begin{bmatrix}S_i&amp;T_i&amp;2_{i-1}\end{bmatrix}\end{gather</em>}$</p>
+<p>$\begin{gather}\begin{bmatrix}S_{i-1} &amp; T_{i-1}&amp;2^{i-2}\end{bmatrix}\times\begin{bmatrix}2&amp;0&amp;0\a_i-1&amp;a_i&amp;0\a_i&amp;a_i&amp;2\end{bmatrix}=\begin{bmatrix}S_i&amp;T_i&amp;2_{i-1}\end{bmatrix}\end{gather}$</p>
 <p>每次修改相当于只会修改一个系数矩阵，用线段树维护一下区间积就可以啦。</p>
 
       
@@ -373,6 +373,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/29/ccpc18-qhd-j-1/" rel="prev" title="ccpc18-qhd-j">
+                ccpc18-qhd-j <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -440,7 +444,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
