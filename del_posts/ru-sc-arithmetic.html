@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
+<meta name="description" content="给出$1\le a,b,p \le 10^4,0&amp;lt;k&amp;lt;38,1\le p^k\le10^{18}$，而且 $p$是奇质数，求$1\le x\le 10^{18}$满足$p^k|a^x+b^x$。">
+<meta name="keywords" content="NumberTheory">
 <meta property="og:type" content="website">
-<meta property="og:title" content="zkx06111&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/Life/index.html">
+<meta property="og:title" content="毛夏令营2013 Arithmetic">
+<meta property="og:url" content="http://yoursite.com/del_posts/ru-sc-arithmetic.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
+<meta property="og:description" content="给出$1\le a,b,p \le 10^4,0&amp;lt;k&amp;lt;38,1\le p^k\le10^{18}$，而且 $p$是奇质数，求$1\le x\le 10^{18}$满足$p^k|a^x+b^x$。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-01T09:23:57.315Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zkx06111&#39;s Blog">
+<meta name="twitter:title" content="毛夏令营2013 Arithmetic">
+<meta name="twitter:description" content="给出$1\le a,b,p \le 10^4,0&amp;lt;k&amp;lt;38,1\le p^k\le10^{18}$，而且 $p$是奇质数，求$1\le x\le 10^{18}$满足$p^k|a^x+b^x$。">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Life/"/>
+  <link rel="canonical" href="http://yoursite.com/del_posts/ru-sc-arithmetic.html"/>
 
 
 
 
 
-  <title>Tag: Life | zkx06111's Blog</title>
+  <title>毛夏令营2013 Arithmetic | zkx06111's Blog</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,82 +239,43 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Life<small>Tag</small>
-        </h1>
-      </div>
+	<h1 class="post-title" itemprop="name headline">毛夏令营2013 Arithmetic</h1>
 
-      
-        
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/05/everyday-life/" itemprop="url">
-              
-                <span itemprop="name">不定期更新的日常</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-05T19:30:00+08:00"
-              content="2018-10-05" >
-          10-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+</header>
 
       
+      
+      
+      <div class="post-body">
         
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
         
-            <a class="post-title-link" href="/2016/04/12/hk-speech-contest/" itemprop="url">
-              
-                <span itemprop="name">迟到的演讲比赛游记</span>
-              
-            </a>
-        
-      </h2>
+          <p>给出$1\le a,b,p \le 10^4,0&lt;k&lt;38,1\le p^k\le10^{18}$，而且 $p$是奇质数，求$1\le x\le 10^{18}$满足$p^k|a^x+b^x$。</p>
+<a id="more"></a>
+<p>$a^x\mod p$的值的周期是$p$，所以$a^x+b^x\equiv 0\pmod p$最多不超过$p$个本质不同的解。现在我们考虑如何把它变成$\mod p^2$意义下的解，再变成$\mod p^3$，一直到$\mod p^k$意义下的解。</p>
+<p>事实上，如果有$a^x+b^x\equiv 0\pmod{p^{k-1}}$，则有$a^{xp}+b^{xp}\equiv 0\pmod{p^k}$。</p>
+<p>证明：设$c\equiv a^x\pmod {p^k}$，则$b^x\equiv p^{k-1}-c\pmod{p^k}$，则</p>
+<p>$a^{xp}+b^{xp}\equiv c^p+(p^{k-1}-c)^p\equiv c^p+(-c)^p+p^{k-1}(-c)^{p-1}{p\choose 1}+\sum\limits_{i=2}^p(p^{k-1})^{i}(-c)^{p-i}{p\choose i}\equiv 0$</p>
+<p>运用这个结论就可以过题了。</p>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-12T20:00:00+08:00"
-              content="2016-04-12" >
-          04-12
-        </time>
+        
       </div>
-
-    </header>
-  </article>
-
-
+      
+      
       
     </div>
-
+    
+    
+    
   </div>
-  
-  
-  
-
-  
 
 
           </div>
@@ -317,6 +283,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -529,6 +499,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
