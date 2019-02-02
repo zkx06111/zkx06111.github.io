@@ -319,19 +319,14 @@
 
       
         
-          
-            <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>请构造出一棵大小为 $n$ 的有根树，使得它的所有子树的大小之和为 $s$，且孩子数最大的节点的孩子数尽量小。</p>
-<h3 id="心路历程"><a href="#心路历程" class="headerlink" title="心路历程"></a>心路历程</h3><p>首先我想了想极端情况，子树大小之和最小的情况是一个星状图，此时 $s=2n-1$。最大的情况是一条链，此时 $s=\dfrac{1}{2}n(n+1)$，猜测了一下只要在这之间都是有解的。</p>
-<p>然后想了想，要让 $s$ 尽量大的话，应该分叉尽量少，因为这样每往下走一层，子树大小变化得越小。</p>
-<p>二分最大分叉数 $k$ ，使得 $k$ 叉树（优先把较浅的层排满）的子树大小之和 $\le s$。</p>
-<p>然后我本来想尝试在那棵树上做些调整，后来有些乱了，就去看了题解。学到了一种比较好的做法。</p>
-<p>设 $d_i$ 为深度为 $i$ 的节点个数（设根的深度为 $1$），则 $s=\sum\limits_{i=1}^{depth}id_i$。这与树的形态无关！</p>
-<p>由于是 $k$ 叉树所以要满足 $d_i&lt;kd_{i-1}$。</p>
-<p>$d_1=1$，然后递推，每次找到一个尽量大的 $d_i$，使得如果下面是一条链的话，子树大小之和 $\ge s$。</p>
-<p>求出所有 $d_i$ 之后可以方便的构造出一棵树。</p>
-<p><a href="http://codeforces.com/contest/1098/submission/49351088" target="_blank" rel="noopener">代码</a>写得比较丑。感觉这个转换还是比较妙的。</p>
-
-          
+          <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>请构造出一棵大小为 $n$ 的有根树，使得它的所有子树的大小之和为 $s$，且孩子数最大的节点的孩子数尽量小。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/02/construct-a-tree/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -448,16 +443,14 @@
 
       
         
-          
-            <p>这是一个栈。</p>
-<h3 id="2019-02-02"><a href="#2019-02-02" class="headerlink" title="2019-02-02"></a>2019-02-02</h3><p><a href="http://codeforces.com/contest/1098/problem/C" target="_blank" rel="noopener">Codeforces: Construct a tree</a> 要写题解</p>
-<h3 id="2019-02-01"><a href="#2019-02-01" class="headerlink" title="2019-02-01"></a>2019-02-01</h3><p><a href="https://codeforces.com/contest/1103/problem/A" target="_blank" rel="noopener">Codeforces: Grid game</a> 构造</p>
-<p><a href="https://codeforces.com/contest/1103/problem/B" target="_blank" rel="noopener">Codeforces: Game with modulo</a> 构造</p>
-<h3 id="2019-01-28"><a href="#2019-01-28" class="headerlink" title="2019-01-28"></a>2019-01-28</h3><p><a href="https://atcoder.jp/contests/nikkei2019-qual/tasks" target="_blank" rel="noopener">AtCoder: Weights on Vertices and Edges</a> 并查集的科学使用</p>
-<p><a href="http://codeforces.com/contest/1098/problem/B" target="_blank" rel="noopener">Codeforces: Nice table</a> 找规律构造</p>
-<p><a href="https://codeforces.com/problemset/problem/1101/D" target="_blank" rel="noopener">Codeforces: GCD Counting</a> 质因数分解，树形dp</p>
-
-          
+          <p>这是一个栈。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/02/ps-log/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
