@@ -249,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/01/ps-log/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/02/construct-a-tree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zkx06111">
@@ -268,7 +268,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/01/ps-log/" itemprop="url">做题记录</a></h1>
+                <a class="post-title-link" href="/2019/02/02/construct-a-tree/" itemprop="url">construct a tree</a></h1>
         
 
         <div class="post-meta">
@@ -280,8 +280,137 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-01T10:31:07+08:00">
-                2019-02-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-02T17:27:42+08:00">
+                2019-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>请构造出一棵大小为 $n$ 的有根树，使得它的所有子树的大小之和为 $s$，且孩子数最大的节点的孩子数尽量小。</p>
+<h3 id="心路历程"><a href="#心路历程" class="headerlink" title="心路历程"></a>心路历程</h3><p>首先我想了想极端情况，子树大小之和最小的情况是一个星状图，此时 $s=2n-1$。最大的情况是一条链，此时 $s=\dfrac{1}{2}n(n+1)$，猜测了一下只要在这之间都是有解的。</p>
+<p>然后想了想，要让 $s$ 尽量大的话，应该分叉尽量少，因为这样每往下走一层，子树大小变化得越小。</p>
+<p>二分最大分叉数 $k$ ，使得 $k$ 叉树（优先把较浅的层排满）的子树大小之和 $\le s$。</p>
+<p>然后我本来想尝试在那棵树上做些调整，后来有些乱了，就去看了题解。学到了一种比较好的做法。</p>
+<p>设 $d_i$ 为深度为 $i$ 的节点个数（设根的深度为 $1$），则 $s=\sum\limits_{i=1}^{depth}id_i$。这与树的形态无关！</p>
+<p>由于是 $k$ 叉树所以要满足 $d_i&lt;kd_{i-1}$。</p>
+<p>$d_1=1$，然后递推，每次找到一个尽量大的 $d_i$，使得如果下面是一条链的话，子树大小之和 $\ge s$。</p>
+<p>求出所有 $d_i$ 之后可以方便的构造出一棵树。</p>
+<p><a href="http://codeforces.com/contest/1098/submission/49351088" target="_blank" rel="noopener">代码</a>写得比较丑。感觉这个转换还是比较妙的。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/02/ps-log/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zkx06111">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zkx06111's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/02/ps-log/" itemprop="url">做题记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-02T10:31:07+08:00">
+                2019-02-02
               </time>
             
 
@@ -321,6 +450,7 @@
         
           
             <p>这是一个栈。</p>
+<h3 id="2019-02-02"><a href="#2019-02-02" class="headerlink" title="2019-02-02"></a>2019-02-02</h3><p><a href="http://codeforces.com/contest/1098/problem/C" target="_blank" rel="noopener">Codeforces: Construct a tree</a> 要写题解</p>
 <h3 id="2019-02-01"><a href="#2019-02-01" class="headerlink" title="2019-02-01"></a>2019-02-01</h3><p><a href="https://codeforces.com/contest/1103/problem/A" target="_blank" rel="noopener">Codeforces: Grid game</a> 构造</p>
 <p><a href="https://codeforces.com/contest/1103/problem/B" target="_blank" rel="noopener">Codeforces: Game with modulo</a> 构造</p>
 <h3 id="2019-01-28"><a href="#2019-01-28" class="headerlink" title="2019-01-28"></a>2019-01-28</h3><p><a href="https://atcoder.jp/contests/nikkei2019-qual/tasks" target="_blank" rel="noopener">AtCoder: Weights on Vertices and Edges</a> 并查集的科学使用</p>
@@ -859,135 +989,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/19/CCPC2017-Hangzhou-B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zkx06111">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zkx06111's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/19/CCPC2017-Hangzhou-B/" itemprop="url">Master of Phi</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-19T19:19:52+08:00">
-                2018-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>通过给出$m\le 20$个质因子$p_i$及其次数$q_i$的方法给出$n$，求$\sum_{d|n}\phi(d)\times \frac{n}{d}$。$T\le 20$。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/19/CCPC2017-Hangzhou-B/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1033,7 +1039,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1046,7 +1052,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

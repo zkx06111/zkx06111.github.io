@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Constructive," />
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="题意请构造出一棵大小为 $n$ 的有根树，使得它的所有子树的大小之和为 $s$，且孩子数最大的节点的孩子数尽量小。 心路历程首先我想了想极端情况，子树大小之和最小的情况是一个星状图，此时 $s=2n-1$。最大的情况是一条链，此时 $s=\dfrac{1}{2}n(n+1)$，猜测了一下只要在这之间都是有解的。 然后想了想，要让 $s$ 尽量大的话，应该分叉尽量少，因为这样每往下走一层，子树大小变">
+<meta name="keywords" content="Constructive">
+<meta property="og:type" content="article">
+<meta property="og:title" content="construct a tree">
+<meta property="og:url" content="http://yoursite.com/2019/02/02/construct-a-tree/index.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
+<meta property="og:description" content="题意请构造出一棵大小为 $n$ 的有根树，使得它的所有子树的大小之和为 $s$，且孩子数最大的节点的孩子数尽量小。 心路历程首先我想了想极端情况，子树大小之和最小的情况是一个星状图，此时 $s=2n-1$。最大的情况是一条链，此时 $s=\dfrac{1}{2}n(n+1)$，猜测了一下只要在这之间都是有解的。 然后想了想，要让 $s$ 尽量大的话，应该分叉尽量少，因为这样每往下走一层，子树大小变">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-09T09:48:40.095Z">
+<meta property="og:updated_time" content="2019-02-02T09:45:14.962Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="construct a tree">
+<meta name="twitter:description" content="题意请构造出一棵大小为 $n$ 的有根树，使得它的所有子树的大小之和为 $s$，且孩子数最大的节点的孩子数尽量小。 心路历程首先我想了想极端情况，子树大小之和最小的情况是一个星状图，此时 $s=2n-1$。最大的情况是一条链，此时 $s=\dfrac{1}{2}n(n+1)$，猜测了一下只要在这之间都是有解的。 然后想了想，要让 $s$ 尽量大的话，应该分叉尽量少，因为这样每往下走一层，子树大小变">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/02/02/construct-a-tree/"/>
 
 
 
 
 
-  <title>tags | zkx06111's Blog</title>
+  <title>construct a tree | zkx06111's Blog</title>
   
 
 
@@ -237,40 +241,153 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/02/construct-a-tree/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zkx06111">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zkx06111's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                22 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Ad-Hoc/" style="font-size: 18px; color: #8e8e8e">Ad-Hoc</a> <a href="/tags/BalancedTree/" style="font-size: 12px; color: #ccc">BalancedTree</a> <a href="/tags/Calculus/" style="font-size: 12px; color: #ccc">Calculus</a> <a href="/tags/CodeForces/" style="font-size: 12px; color: #ccc">CodeForces</a> <a href="/tags/Combinatorics/" style="font-size: 18px; color: #8e8e8e">Combinatorics</a> <a href="/tags/Constructive/" style="font-size: 12px; color: #ccc">Constructive</a> <a href="/tags/DataStructure/" style="font-size: 18px; color: #8e8e8e">DataStructure</a> <a href="/tags/DataStructures/" style="font-size: 12px; color: #ccc">DataStructures</a> <a href="/tags/Develop/" style="font-size: 12px; color: #ccc">Develop</a> <a href="/tags/DynamicProgramming/" style="font-size: 12px; color: #ccc">DynamicProgramming</a> <a href="/tags/GameTheory/" style="font-size: 12px; color: #ccc">GameTheory</a> <a href="/tags/Geometry/" style="font-size: 12px; color: #ccc">Geometry</a> <a href="/tags/GraphTheory/" style="font-size: 24px; color: #4f4f4f">GraphTheory</a> <a href="/tags/ICPC/" style="font-size: 30px; color: #111">ICPC</a> <a href="/tags/Life/" style="font-size: 18px; color: #8e8e8e">Life</a> <a href="/tags/LinearAlgebra/" style="font-size: 12px; color: #ccc">LinearAlgebra</a> <a href="/tags/Matrix/" style="font-size: 12px; color: #ccc">Matrix</a> <a href="/tags/NumberTheory/" style="font-size: 24px; color: #4f4f4f">NumberTheory</a> <a href="/tags/Polynomial/" style="font-size: 12px; color: #ccc">Polynomial</a> <a href="/tags/Probability/" style="font-size: 12px; color: #ccc">Probability</a> <a href="/tags/Python/" style="font-size: 12px; color: #ccc">Python</a> <a href="/tags/SegmentTree/" style="font-size: 12px; color: #ccc">SegmentTree</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">construct a tree</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-02T17:27:42+08:00">
+                2019-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>请构造出一棵大小为 $n$ 的有根树，使得它的所有子树的大小之和为 $s$，且孩子数最大的节点的孩子数尽量小。</p>
+<h3 id="心路历程"><a href="#心路历程" class="headerlink" title="心路历程"></a>心路历程</h3><p>首先我想了想极端情况，子树大小之和最小的情况是一个星状图，此时 $s=2n-1$。最大的情况是一条链，此时 $s=\dfrac{1}{2}n(n+1)$，猜测了一下只要在这之间都是有解的。</p>
+<p>然后想了想，要让 $s$ 尽量大的话，应该分叉尽量少，因为这样每往下走一层，子树大小变化得越小。</p>
+<p>二分最大分叉数 $k$ ，使得 $k$ 叉树（优先把较浅的层排满）的子树大小之和 $\le s$。</p>
+<p>然后我本来想尝试在那棵树上做些调整，后来有些乱了，就去看了题解。学到了一种比较好的做法。</p>
+<p>设 $d_i$ 为深度为 $i$ 的节点个数（设根的深度为 $1$），则 $s=\sum\limits_{i=1}^{depth}id_i$。这与树的形态无关！</p>
+<p>由于是 $k$ 叉树所以要满足 $d_i&lt;kd_{i-1}$。</p>
+<p>$d_1=1$，然后递推，每次找到一个尽量大的 $d_i$，使得如果下面是一条链的话，子树大小之和 $\ge s$。</p>
+<p>求出所有 $d_i$ 之后可以方便的构造出一棵树。</p>
+<p><a href="http://codeforces.com/contest/1098/submission/49351088" target="_blank" rel="noopener">代码</a>写得比较丑。感觉这个转换还是比较妙的。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Constructive/" rel="tag"># Constructive</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/02/ps-log/" rel="next" title="做题记录">
+                <i class="fa fa-chevron-left"></i> 做题记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -303,8 +420,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -355,6 +481,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#心路历程"><span class="nav-number">2.</span> <span class="nav-text">心路历程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
