@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
 <meta property="og:description" content="你有一个大小为 $2^{30}$ 的未知数组 $a$，下标范围是 $0$ 到 $2^{30}-1$，有 $q\le10^5$ 次操作，每次操作要么告知你一个闭区间 $[l, r]$ 的异或和，要么询问闭区间 $[l,r]$ 的异或和，若根据已有信息无法求得，则输出 $-1$，强制在线。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-04T05:31:34.036Z">
+<meta property="og:updated_time" content="2019-02-04T05:32:16.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Deduction Queries">
 <meta name="twitter:description" content="你有一个大小为 $2^{30}$ 的未知数组 $a$，下标范围是 $0$ 到 $2^{30}-1$，有 $q\le10^5$ 次操作，每次操作要么告知你一个闭区间 $[l, r]$ 的异或和，要么询问闭区间 $[l,r]$ 的异或和，若根据已有信息无法求得，则输出 $-1$，强制在线。">
@@ -325,7 +325,7 @@
 <p>记 $W(a,b)$ 表示区间 $[\min(a,b),\max(a,b)]$ 的异或和</p>
 <p>则 $a&lt; b&lt;c​$ 时，有$W[a,b]\oplus W[b+1,c]=W[a,c]​$</p>
 <p>$W[a,c]\oplus W[b,c]=W[a,b-1]$</p>
-<p>但如果采用左开右闭区间的话就可以极大的简化，记 $S(a,b)$表示区间 $[\min(a,b),\max(a,b))$的异或和。</p>
+<p>但如果采用左开右闭区间的话就可以极大的简化，记 $S(a,b)$ 表示区间 $[\min(a,b),\max(a,b))$的异或和。</p>
 <p>则有$S(a,b)\oplus S(b,c)=S(a,c)​$</p>
 <p>这个东西，长得就像是一个图中的距离。</p>
 <p>所以对于每一个闭区间 $[l, r]$ 的异或和 $x$ ，我们都给 $l$ 和 $r+1$ 连接上一条权值为 $x$ 的边，然后定义两个点的距离为它们之间边的权值的异或和。对于询问 $[l,r]$ ，只需要求出 $l$ 和 $r+1$ 的距离就可以了。</p>
