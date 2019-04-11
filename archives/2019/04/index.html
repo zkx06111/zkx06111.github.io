@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content=",,,,,,,,,,," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,21 +79,13 @@
 
 
 
-<meta name="description" content="题意 题解把每棵树缩成一个点。从T向S连边，那题目就转化为寻找一条欧拉回路。 但由于原图上一个点只能访问一次，从一条有向边进入一棵树，并不是总能从另一条有向边出去。  例如这个图，中间两个点无论如何都会被重复经过。 对每一棵树进行dp来寻找一个入边和出边的对应关系，使得不会有点被重复经过。 这个dp怎么做呢？ 对于一个树点，首先直接连到它上面的出入边肯定各不超过1条，不然一定无解。 如果出入边均0">
-<meta name="keywords" content="GraphTheory">
 <meta property="og:type" content="website">
-<meta property="og:title" content="GCPC F Last Minute Constructions">
-<meta property="og:url" content="http://yoursite.com/del_posts/last-minute-constructions.html">
+<meta property="og:title" content="zkx06111&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2019/04/index.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
-<meta property="og:description" content="题意 题解把每棵树缩成一个点。从T向S连边，那题目就转化为寻找一条欧拉回路。 但由于原图上一个点只能访问一次，从一条有向边进入一棵树，并不是总能从另一条有向边出去。  例如这个图，中间两个点无论如何都会被重复经过。 对每一棵树进行dp来寻找一个入边和出边的对应关系，使得不会有点被重复经过。 这个dp怎么做呢？ 对于一个树点，首先直接连到它上面的出入边肯定各不超过1条，不然一定无解。 如果出入边均0">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/del_posts/var/folders/g6/ydpn55kd6hb0b8kd8hp1ngmh0000gn/T/abnerworks.Typora/image-20180810193607554.png">
-<meta property="og:image" content="http://yoursite.com/del_posts/var/folders/g6/ydpn55kd6hb0b8kd8hp1ngmh0000gn/T/abnerworks.Typora/image-20180810193941856.png">
-<meta property="og:updated_time" content="2018-08-11T13:19:03.197Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GCPC F Last Minute Constructions">
-<meta name="twitter:description" content="题意 题解把每棵树缩成一个点。从T向S连边，那题目就转化为寻找一条欧拉回路。 但由于原图上一个点只能访问一次，从一条有向边进入一棵树，并不是总能从另一条有向边出去。  例如这个图，中间两个点无论如何都会被重复经过。 对每一棵树进行dp来寻找一个入边和出边的对应关系，使得不会有点被重复经过。 这个dp怎么做呢？ 对于一个树点，首先直接连到它上面的出入边肯定各不超过1条，不然一定无解。 如果出入边均0">
-<meta name="twitter:image" content="http://yoursite.com/del_posts/var/folders/g6/ydpn55kd6hb0b8kd8hp1ngmh0000gn/T/abnerworks.Typora/image-20180810193607554.png">
+<meta name="twitter:title" content="zkx06111&#39;s Blog">
 
 
 
@@ -123,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/del_posts/last-minute-constructions.html"/>
+  <link rel="canonical" href="http://yoursite.com/archives/2019/04/"/>
 
 
 
 
 
-  <title>GCPC F Last Minute Constructions | zkx06111's Blog</title>
+  <title>Archive | zkx06111's Blog</title>
   
 
 
@@ -148,7 +140,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,49 +234,74 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-	<h1 class="post-title" itemprop="name headline">GCPC F Last Minute Constructions</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
+      <span class="archive-page-counter">
         
         
-          <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p><img src="/del_posts/var/folders/g6/ydpn55kd6hb0b8kd8hp1ngmh0000gn/T/abnerworks.Typora/image-20180810193607554.png" alt="image-20180810193607554"></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>把每棵树缩成一个点。从T向S连边，那题目就转化为寻找一条欧拉回路。</p>
-<p>但由于原图上一个点只能访问一次，从一条有向边进入一棵树，并不是总能从另一条有向边出去。</p>
-<p><img src="/del_posts/var/folders/g6/ydpn55kd6hb0b8kd8hp1ngmh0000gn/T/abnerworks.Typora/image-20180810193941856.png" alt="image-20180810193941856"></p>
-<p>例如这个图，中间两个点无论如何都会被重复经过。</p>
-<p>对每一棵树进行dp来寻找一个入边和出边的对应关系，使得不会有点被重复经过。</p>
-<p>这个dp怎么做呢？</p>
-<p>对于一个树点，首先直接连到它上面的出入边肯定各不超过1条，不然一定无解。</p>
-<p>如果出入边均0条，则它子树中的两条边可以经过它配对，<strong>注意判断两棵子树上传过来的出入边恰好是同一条的情况。</strong></p>
-<p>如果出入边均1条，则它们就直接配对。</p>
-<p>否则，连在它上面的有向边优先和它子树剩下的边配对，如果子树中剩下的边超过1条则无解。如果子树中没有剩下边则交给父节点。</p>
-<p>如果某一棵树不存在对应关系，则 impossible 。</p>
-<p>否则有解。</p>
+        
+          
+        
+        Um..! 28 posts in total. Keep on posting.
+      </span>
+
+      
 
         
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2019">2019</h1>
+          </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/11/NWERC15-B/" itemprop="url">
+              
+                <span itemprop="name">NWERC15 B. Better Productivity</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2019-04-11T16:26:26+08:00"
+              content="2019-04-11" >
+          04-11
+        </time>
       </div>
+
+    </header>
+  </article>
+
+
+
       
-      
-      
+
     </div>
-    
-    
-    
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -292,10 +309,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -316,17 +329,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -377,22 +381,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -533,10 +521,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
