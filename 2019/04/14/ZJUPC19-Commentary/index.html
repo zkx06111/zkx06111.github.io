@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ICPC,LinearAlgebra," />
+  <meta name="keywords" content="ICPC,Life," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="有一些$k$维整向量$v_1,v_2…v_n$，对于每个$a\in\rm{Z}^k$，给$a$和$a+v_i$连上一条边，问这个图是否为二分图。">
-<meta name="keywords" content="ICPC,LinearAlgebra">
+<meta name="description" content="现在是 2019 年 4 月 14 日 18:20，我坐在西1-208 《形势与政策》课的教室里写这篇分析。 总体来说，我队（三卜白水 Jade Spring）在这场比赛中的表现略低于我的预期。原因一部分在于比赛策略上有一些小问题，但主要在于队员实力不足。">
+<meta name="keywords" content="ICPC,Life">
 <meta property="og:type" content="article">
-<meta property="og:title" content="kd-odd-circle-gauss">
-<meta property="og:url" content="http://yoursite.com/2018/08/13/kd-odd-circle-gauss/index.html">
+<meta property="og:title" content="关于19年校赛及我队表现的唐突分析">
+<meta property="og:url" content="http://yoursite.com/2019/04/14/ZJUPC19-Commentary/index.html">
 <meta property="og:site_name" content="zkx06111&#39;s Blog">
-<meta property="og:description" content="有一些$k$维整向量$v_1,v_2…v_n$，对于每个$a\in\rm{Z}^k$，给$a$和$a+v_i$连上一条边，问这个图是否为二分图。">
+<meta property="og:description" content="现在是 2019 年 4 月 14 日 18:20，我坐在西1-208 《形势与政策》课的教室里写这篇分析。 总体来说，我队（三卜白水 Jade Spring）在这场比赛中的表现略低于我的预期。原因一部分在于比赛策略上有一些小问题，但主要在于队员实力不足。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-16T12:20:41.684Z">
+<meta property="og:updated_time" content="2019-04-14T11:17:34.004Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kd-odd-circle-gauss">
-<meta name="twitter:description" content="有一些$k$维整向量$v_1,v_2…v_n$，对于每个$a\in\rm{Z}^k$，给$a$和$a+v_i$连上一条边，问这个图是否为二分图。">
+<meta name="twitter:title" content="关于19年校赛及我队表现的唐突分析">
+<meta name="twitter:description" content="现在是 2019 年 4 月 14 日 18:20，我坐在西1-208 《形势与政策》课的教室里写这篇分析。 总体来说，我队（三卜白水 Jade Spring）在这场比赛中的表现略低于我的预期。原因一部分在于比赛策略上有一些小问题，但主要在于队员实力不足。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/13/kd-odd-circle-gauss/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/04/14/ZJUPC19-Commentary/"/>
 
 
 
 
 
-  <title>kd-odd-circle-gauss | zkx06111's Blog</title>
+  <title>关于19年校赛及我队表现的唐突分析 | zkx06111's Blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/13/kd-odd-circle-gauss/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/14/ZJUPC19-Commentary/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zkx06111">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">kd-odd-circle-gauss</h1>
+          <h1 class="post-title" itemprop="name headline">关于19年校赛及我队表现的唐突分析</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-13T22:30:51+08:00">
-                2018-08-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-14T18:20:57+08:00">
+                2019-04-14
               </time>
             
 
@@ -320,17 +320,19 @@
       
 
       
-        <p>有一些$k$维整向量$v_1,v_2…v_n$，对于每个$a\in\rm{Z}^k$，给$a$和$a+v_i$连上一条边，问这个图是否为二分图。</p>
+        <p>现在是 2019 年 4 月 14 日 18:20，我坐在西1-208 《形势与政策》课的教室里写这篇分析。</p>
+<p>总体来说，我队（三卜白水 Jade Spring）在这场比赛中的表现略低于我的预期。原因一部分在于比赛策略上有一些小问题，但主要在于队员实力不足。</p>
 <a id="more"></a>
-<p>问题可以转化为检查是否有$c$满足</p>
-<p>(i) $\sum c_iv_i=0$</p>
-<p>(ii) $\sum c_i=1\pmod 2$</p>
-<p>我们设(iii) $\sum c_iv_i=0$，下面证明(i)(ii)有解当且仅当(ii)(iii)有解。</p>
-<ul>
-<li>显然(i)(ii)的解一定是(ii)(iii)的解。</li>
-<li>考虑一个(ii)(iii)的解是$d,0\le d_i\le1$，令$c_i=2x_i+d_i$，那么有$\sum d_iv_i=0\pmod 2,\sum d_i=1\pmod 2$。<br>而此时方程(i)为$\sum(2x_i+d_i)v_i=0\Leftrightarrow \sum 2x_iv_i=-\sum d_iv_i$<br>由于$\sum d_i\vec{v_i}=\vec{0}\pmod 2$，所以$\sum d_i\vec{v_i}$每一维都为偶数。<br>因此方程(i)可以两边除以$2$，所以存在$x$，所以(ii)(iii)的解对应了一个(i)的解</li>
-</ul>
-<p>用高斯消元判断是否有解，可以压位优化。复杂度$O(\frac{n^3}{w})$。</p>
+<h3 id="比赛复盘"><a href="#比赛复盘" class="headerlink" title="比赛复盘"></a>比赛复盘</h3><p>上来三开，zkx看了 B 和 C（后来发现步数 k 很大没看到），zxn看了 J，zyh看了 E。zxn 和 zyh 分别上来过了 <strong>J(+0 0:04)</strong> 和 <strong>E(+0 0:13)</strong>，zkx 上来写了一发 C 的模拟，发现过不去第二个样例，意识到 k 很大，就先丢下，写了一发 B，然后 wa 了，换 zxn 上去写了一下 G，wa 了，zkx 给 zyh 讲了一下 B，zyh 开始帮忙查代码，查出高精度加法写错了，过了 <strong>B(+1 1:00</strong>)。zxn 给 zkx 报了一下 A，然后上去写 G。写到一半 zxn 卡了，zkx 会了 A，上去写了一下，结果 wa了，又丢给 zyh 查，zxn 上来过了 <strong>G(+2 1:19)</strong>，zkx 觉得 C 到达一个访问过的点就直接 break，交了一发 C，没过，然后突然想起来 A 没有排序，过了一下 <strong>A(+1 1:35)</strong>。这期间 zxn 和 zyh 开出了 H，zkx 开始写 H，给 zyh 说了一下 C，zyh 会了 C 的正解，稍微修改 zkx 代码交了几发，一直没过，发现 long long 没开，过了 <strong>C(+3 2:02)</strong>。</p>
+<p>zxn 提出了 I 中途相遇的做法，大家觉得 I 比 H 好写，zkx 就开始写 I，zxn 帮忙推推些细节。zyh 去看 D，期间 I 的前半部分要求子集和，zkx 和 zxn 卡了一下，后来提出了 $3^{15} \times 2 ^{25}$ 的做法，大概 2:40 的时候写完了，交了一发 T 掉了，两人开始卡常，zyh 也来帮忙卡常。卡着卡着卡到 3:00，突然发现由于要判断冲突，程序的复杂度实际上是 $3^{15}\times2^{25}\times 20^2$ 的，zxn 拿着 I 想着如何去掉 $20^2$，zkx 继续写 H，期间 zxn 会了优化，上来改了一发 wa 了，zkx 交了一下 H 结果 T 了，打印了代码开始看，zxn 在机上改 I，zkx 看出了 H 的错误过了 <strong>H(+1 3:37)</strong>，大家一起帮忙看 I，最后也没看出来（最后十分钟 zxn 慌了开始改一些不会错的地方）。</p>
+<h3 id="策略问题"><a href="#策略问题" class="headerlink" title="策略问题"></a>策略问题</h3><p>对于 I 题，写代码之前没有考虑如何快速处理冲突，导致写出来的代码和自己想的复杂度不一样，应该在写代码之前尽量考虑清楚细节。</p>
+<h3 id="实力问题"><a href="#实力问题" class="headerlink" title="实力问题"></a>实力问题</h3><p>zkx 前期的两个傻逼错误使得智商选手 zyh 失去了很多思考时间，也让队伍失去了机时。事实上 zyh 已经有了 D 的大致思路，但是没有时间细化也没有机时来尝试了。</p>
+<p>对于 I 题，三人都没想到 $O(n 2^n)​$ 的子集和求法，所以导致整体做法比较鬼畜。</p>
+<p>三人的数学感觉较差，D 题这样的题不敢押宝。</p>
+<h3 id="比赛评论"><a href="#比赛评论" class="headerlink" title="比赛评论"></a>比赛评论</h3><p>排在我们前面的队伍，有数院选手的队伍都过了 D，前期出题较快的都过了 I。</p>
+<p>感觉我们至少应该 8 题。</p>
+<p>zkx 可能是个傻逼。</p>
+<p>被学弟爆草了耶。</p>
 
       
     </div>
@@ -350,7 +352,7 @@
           
             <a href="/tags/ICPC/" rel="tag"># ICPC</a>
           
-            <a href="/tags/LinearAlgebra/" rel="tag"># LinearAlgebra</a>
+            <a href="/tags/Life/" rel="tag"># Life</a>
           
         </div>
       
@@ -363,8 +365,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/10/a-hard-lesson/" rel="next" title="沉痛的教训">
-                <i class="fa fa-chevron-left"></i> 沉痛的教训
+              <a href="/2019/04/11/NWERC15-H/" rel="next" title="NWERC15 H. Hole in One">
+                <i class="fa fa-chevron-left"></i> NWERC15 H. Hole in One
               </a>
             
           </div>
@@ -372,10 +374,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/16/donut-drone/" rel="prev" title="CERC2017 - Donut Drone">
-                CERC2017 - Donut Drone <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -427,8 +425,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -479,6 +486,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#比赛复盘"><span class="nav-number">1.</span> <span class="nav-text">比赛复盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#策略问题"><span class="nav-number">2.</span> <span class="nav-text">策略问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实力问题"><span class="nav-number">3.</span> <span class="nav-text">实力问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比赛评论"><span class="nav-number">4.</span> <span class="nav-text">比赛评论</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
