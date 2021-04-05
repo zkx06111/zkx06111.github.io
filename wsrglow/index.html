@@ -1,1 +1,325 @@
-Hello WSRGlow
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>WSRGlow: A Glow-based Waveform Generative Model for Audio Super-Resolution</title>
+
+  </head>
+  <body style="font-family: Helvetica" data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed=""><h2>Audio Samples for "WSRGlow: A Glow-based Waveform Generative Model for Audio Super-Resolution"</h2>
+  
+    
+    <div><p><b>Abstract:</b>
+        Audio super-resolution is the task of constructing a high-resolution (HR) audio from a low-resolution (LR) audio that
+        contains a fraction of the original waveform samples. Previous methods based on convolutional neural networks and mean
+        squared error training objective have relatively low performance, while adversarial generative models are difficult to
+        train and tune. Recently, normalizing flow has attracted a lot of attention for its high performance, simple training
+        and fast inference. In this paper, we propose WSRGlow, a Glow-based waveform generative model to perform audio
+        super-resolution. Specifically, 1) we integrate WaveNet and Glow to directly maximize the exact likelihood of the target
+        HR audio conditioned on LR information; and 2) to exploit the audio information from low-resolution audio, we propose an
+        LR audio encoder and an STFT encoder, which encode the LR information from the time domain and frequency domain
+        respectively. The experimental results show that the proposed model is easier to train and outperforms the previous
+        works in terms of both objective and perceptual quality. Audio samples are available at
+        https://zkx06111.github.io/wsrglow/.
+    </p></div>
+
+  
+  	<br> <br>
+    
+    <p>This page contains a set of audio samples to support the paper; we suggest that the reader listen to the samples when reading the paper.<br>
+    <b>All utterances were unseen during training, and the results are the first 5 utterances of the speaker p225 in VCTK corpus.</b></p>
+
+
+    <h3> Section Ⅰ: Examples for 2x Super-Resolution (upsampled from 24kHz to 48kHz) </h3>
+    This section contains examples for the speaker “p225" from the VCTK dataset. The upsampling rate is 2 (from 24kHz to 48kHz).
+    <br> <br>
+    <table>
+      <thead>
+        <tr>
+          <th align="middle">Original low resolution (24 kHz)</th>
+          <th align="middle">Original high resolution (48 kHz)</th>
+          <th align="middle">U-Net (48 kHz)</th>
+          <th align="middle">MU-GAN (48 kHz)</th>
+          <th align="middle">WSRGlow (48 kHz)</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/lr/p225_001_lr.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/gt/p225_001_hr.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/audiounet/p225_001_pred.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/mugan/p225_001_pred.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/wsrglow/p225_001_pred.mp3" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/lr/p225_002_lr.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/gt/p225_002_hr.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/audiounet/p225_002_pred.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/mugan/p225_002_pred.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/wsrglow/p225_002_pred.mp3" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/lr/p225_003_lr.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/gt/p225_003_hr.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/audiounet/p225_003_pred.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/mugan/p225_003_pred.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/wsrglow/p225_003_pred.mp3" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/lr/p225_004_lr.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/gt/p225_004_hr.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/audiounet/p225_004_pred.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/mugan/p225_004_pred.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/wsrglow/p225_004_pred.mp3" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/lr/p225_005_lr.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/gt/p225_005_hr.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/audiounet/p225_005_pred.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/mugan/p225_005_pred.mp3" type="audio/wav"></audio></td>
+          <td><audio controls="" style="width: 250px; height: 50px"><source src="samples/2xsr/wsrglow/p225_005_pred.mp3" type="audio/wav"></audio></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+<h3> Section II: Examples for 4x Super-Resolution (upsampled from 12kHz to 48kHz) </h3>
+This section contains examples for the speaker “p225" from the VCTK dataset. The upsampling rate is 4 (from 12kHz to
+48kHz). All models but <i>WSRGlow (50000)</i> are trained with the same step size for 100000 iterations.
+<br> <br>
+<table>
+  <thead>
+    <tr>
+      <th align="middle">Original low resolution (12 kHz)</th>
+      <th align="middle">Original high resolution (48 kHz)</th>
+      <th align="middle">U-Net (48 kHz)</th>
+      <th align="middle">MU-GAN (48 kHz)</th>
+      <th align="middle">WSRGlow (50000 iters) (48 kHz)</th>
+      <th align="middle">WSRGlow (100000 iters) (48 kHz)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/lr/p225_001_lr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/gt/p225_001_hr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/audiounet/p225_001_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/mugan/p225_001_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,50000iters/p225_001_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,100000iters/p225_001_pred.mp3" type="audio/wav">
+        </audio></td>
+    </tr>
+
+    <tr>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/lr/p225_002_lr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/gt/p225_002_hr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/audiounet/p225_002_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/mugan/p225_002_pred.mp3" type="audio/wav">
+        </audio></td>
+              <td><audio controls="" style="width: 250px; height: 50px">
+                  <source src="samples/4xsr/wsrglow_T=1,50000iters/p225_002_pred.mp3" type="audio/wav">
+                </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,100000iters/p225_002_pred.mp3" type="audio/wav">
+        </audio></td>
+    </tr>
+
+    <tr>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/lr/p225_003_lr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/gt/p225_003_hr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/audiounet/p225_003_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/mugan/p225_003_pred.mp3" type="audio/wav">
+        </audio></td>
+            <td><audio controls="" style="width: 250px; height: 50px">
+                <source src="samples/4xsr/wsrglow_T=1,50000iters/p225_003_pred.mp3" type="audio/wav">
+              </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,100000iters/p225_003_pred.mp3" type="audio/wav">
+        </audio></td>
+    </tr>
+
+    <tr>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/lr/p225_004_lr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/gt/p225_004_hr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/audiounet/p225_004_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/mugan/p225_004_pred.mp3" type="audio/wav">
+        </audio></td>
+              <td><audio controls="" style="width: 250px; height: 50px">
+                  <source src="samples/4xsr/wsrglow_T=1,50000iters/p225_004_pred.mp3" type="audio/wav">
+                </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,100000iters/p225_004_pred.mp3" type="audio/wav">
+        </audio></td>
+    </tr>
+
+    <tr>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/lr/p225_005_lr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/gt/p225_005_hr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/audiounet/p225_005_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/mugan/p225_005_pred.mp3" type="audio/wav">
+        </audio></td>
+              <td><audio controls="" style="width: 250px; height: 50px">
+                  <source src="samples/4xsr/wsrglow_T=1,50000iters/p225_005_pred.mp3" type="audio/wav">
+                </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,100000iters/p225_005_pred.mp3" type="audio/wav">
+        </audio></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h3> Section III: Examples for 4x Super-Resolution using WSRGlow with different inference temparatures </h3>
+This section contains examples for the speaker “p225" from the VCTK dataset. The upsampling rate is 4 (from 12kHz to
+48kHz).
+<br> The same WSRGlow model is set to different temperatures T=0.5,0.8,1.0 during inference.
+<br> <br>
+<table>
+  <thead>
+    <tr>
+      <th align="middle">Original low resolution (12 kHz)</th>
+      <th align="middle">Original high resolution (48 kHz)</th>
+      <th align="middle">WSRGlow, T=0.5 (48 kHz)</th>
+      <th align="middle">WSRGlow, T=0.8 (48 kHz)</th>
+      <th align="middle">WSRGlow, T=1 (48 kHz)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/lr/p225_001_lr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/gt/p225_001_hr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=0.5/p225_001_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=0.8/p225_001_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,100000iters/p225_001_pred.mp3" type="audio/wav">
+        </audio></td>
+    </tr>
+
+    <tr>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/lr/p225_002_lr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/gt/p225_002_hr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=0.5/p225_002_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=0.8/p225_002_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,100000iters/p225_002_pred.mp3" type="audio/wav">
+        </audio></td>
+    </tr>
+
+    <tr>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/lr/p225_003_lr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/gt/p225_003_hr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=0.5/p225_003_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=0.8/p225_003_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,100000iters/p225_003_pred.mp3" type="audio/wav">
+        </audio></td>
+    </tr>
+
+    <tr>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/lr/p225_004_lr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/gt/p225_004_hr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=0.5/p225_004_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=0.8/p225_004_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,100000iters/p225_004_pred.mp3" type="audio/wav">
+        </audio></td>
+    </tr>
+
+    <tr>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/lr/p225_005_lr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/gt/p225_005_hr.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=0.5/p225_005_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=0.8/p225_005_pred.mp3" type="audio/wav">
+        </audio></td>
+      <td><audio controls="" style="width: 250px; height: 50px">
+          <source src="samples/4xsr/wsrglow_T=1,100000iters/p225_005_pred.mp3" type="audio/wav">
+        </audio></td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+  </body></html>
